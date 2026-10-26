@@ -1,0 +1,14 @@
+\begin{thebibliography}{Jac99}
+
+\bibitem[Jac99]{JacobsCLTT}
+B.~Jacobs.
+\newblock {\em Categorical Logic and Type Theory}, volume 141 of {\em Studies
+  in Logic and the Foundations of Mathematics}.
+\newblock North Holland, 1999.
+
+\bibitem[Str18]{TS}
+Thomas Streicher.
+\newblock Fibered {Categories} a la {Jean} {Benabou}.
+\newblock Preprint, {arXiv}:1801.02927 [math.{CT}] (2018), 2018.
+
+\end{thebibliography}

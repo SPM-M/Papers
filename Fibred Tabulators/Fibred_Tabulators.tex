@@ -1,0 +1,155 @@
+\documentclass[9pt, leqno]{amsart}
+\usepackage[center]{titlesec}
+\usepackage{lipsum}
+
+\input{preamble}
+%\usepackage[document]{ragged2e}
+
+%\makeatletter
+%\renewenvironment{abstract}{%
+%	\begin{center}%
+%		\scshape \abstractname% center the word "Abstract" in small caps (optional)
+%	\end{center}%
+%	\quotation
+%	\noindent\centering
+%}{%
+%	\endquotation
+%}
+%\makeatother
+
+%\title{Fibred Tabulators}
+%\author{Siyabonga Mthimkhulu}
+%\date{\today}
+\titleformat{\section}
+{\normalfont\Large\bfseries}
+{\thesection}
+{1em}
+{\Large}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries}
+{\thesubsection}
+{1em}
+{}
+
+\titleformat{\subsubsection}
+{\normalfont\large\bfseries}
+{\thesubsubsection}
+{1em}
+{}
+
+
+\begin{document}
+	\title{Fibred Tabulators} %%%%%%%%%%%%
+	\author[S.P Mthimkulu]{S.P Mthimkhldjgjfdslulu}
+	\date{\today}
+	\address{5 Melrose Road, Muizenberg, Cape Town, South Africa}
+	\email{siyam@aims.ac.za}
+	\maketitle
+	
+
+\begin{abstract}
+	
+	This paper defines tabulators in strict double fibration (\ie, double fibrations of double categories with tabulators). Additionally, we give a Beck-Chevalley Condition for fibred tabulators. Moreover, we show that  fibred tabulators are characterized by a preservation property.
+\end{abstract}
+	
+\let\thefootnote\relax
+\footnotetext{MSC2020: Primary 00A05, Secondary 00A66.} %%%%%%%%%%
+
+\bigskip
+
+\section*{Introduction}
+\lipsum[2][1-4]
+
+\section{Fibrations}
+
+In this section we recall some basic facts about fibrations and their examples.
+
+\begin{defn}
+	Let $\fib$ be a functor. A morphism $\mor{f}{X}{Y}$ in $\cat{E}$ is \emph{cartesian} over $\mor{u}{I}{J}$ \ie, $P(f) = u$ if for any $\mor{v}{K}{I}$ in $\cat{B}$ and $\mor{h}{Z}{Y}$ over $u \comp v$ there is a unique morphism $\mor{g}{Z}{X}$ over $v$ with $h = f \comp g$.
+	\begin{equation*}
+		\xymatrix{
+			\cat{E} \ar[d]_{P} && Z \ar@{-->}[r]_{g} \ar@/^1.3pc/[rr]^{h} & X \ar[r]_{f} & Y\\
+			\cat{B} && K \ar[r]_{v} & I \ar[r]_{u} & J
+		}
+	\end{equation*}
+	
+	A morphism $\mor{k}{X}{Y}$ is called \emph{vertical} if it lies over an identity in $\cat{B}$. For an object $J \in \cat{B}$, the fibre of $P$ at $J$ denoted by $P(J)$ is the subcategory of $\cat{E}$ whose morphisms $k$ lie over $id_J$.
+\end{defn}
+
+\begin{defn}
+	A functor $\fib$ is called \emph{fibred category} or a \emph{fibration} if for every $Y \in \cat{E}$ and $\mor{u}{I}{PY}$ there is a cartesian morphism $\cart{u}{E}$ over $u$. If $P$ is a fibration, a \emph{cleavage} for $P$ denoted $\varphi(u,E)$ is a choice of cartesian lifts for $u$ at $E$.
+\end{defn}
+
+\subsection{Examples}
+
+Let $\cat{C}^2$ denote the slice category of $\cat{C}$ over itself
+\begin{example}[Fundamental Fibration]
+	Let $\cat{C}$ be a category with pullbacks. Then the functor $\mor{\text{cod}}{\cat{C}^2}{\cat{C}}$ is a fibration; a commutative square is a cartesian arrow in $\cat{C}^2$ precisely when it is a pullback.
+\end{example}
+
+\begin{example}
+	The domain functor $\mor{\text{dom}}{\slice{\cat{C}}}{\cat{C}}$ is a fibration.
+\end{example}
+
+\begin{example}[Family fibration]
+	Every category $\cat{C}$ gives rise to a \emph{family fibration} $\mor{\cat{F}}{Fam(\cat{C})}{Set}$. A morphism $(u,\{\varphi_i\}_{i \in I})$ is cartesian when every $\varphi_i$ is an isomorphism. Then $\cat{F}$ is a fibration since given $\mor{u}{I}{J}$ and $\{Y_j\}_{j \in J}$, $\mor{(u,\{1_{Y_{u(i)}}\})}{\{Y_{u(i)}\}_{i \in I}}{\{Y_j\}_{j \in J}}$ is cartesian over $u$. 
+\end{example}
+
+\subsection{Fibred Finite Limits}
+
+In \cite{TS} fibred finite limits are given in terms of terminal objects and pullbacks. Furthermore, \cite{JacobsCLTT} captures the notion of fibred terminal objects in $\mathbf{Fib}$ using fibred adjunctions. 
+
+\begin{defn}
+	A fibration $\fib$ has fibred terminal objects if every fibre $P(I)$ has a terminal object $1_I$ and they are preserved by cartesianness.
+\end{defn}
+
+In $\slicec{\cat{B}}$, the category of fibrations over $\cat{B}$, a fibration $P$ has fibred terminals if the fibred functor $\mor{F}{P}{id_B}$ has a right adjoint. Moreover, this property is characterized by preservation as follows.
+
+\begin{lemma}
+	Let $\cat{B}$ be a category with a terminal object $\ter{B}$. Then $\fib$ has fibred terminals if and only if $\cat{E}$ has a terminal $1_\cat{E}$ and $P(\ter{E})$ is a terminal in $\cat{B}$.
+\end{lemma}
+
+\begin{proof}
+	Consider the following diagram in $\Fib$
+	
+	\begin{equation*}
+		\xymatrix{
+			\cat{E} \ar[dd]_{P} \ar@<1.4ex>[rr]^{!} & \perp & 1 \ar@<1.4ex>[ll]^{\ter{E}} \ar@{=}[dd]^{id}\\
+			\\
+			B \ar@<1.4ex>[rr]^{!} & \perp & 1 \ar@<1.4ex>[ll]^{\ter{B}}
+		}
+	\end{equation*}
+\end{proof}
+
+Futhermore, we have the following theorem
+
+\begin{thm}
+	If $\cat{B}$ has a terminal object $\ter{B}$ and $\fib$ is a fibration, the following are equivalent
+	\begin{enumerate}
+		\item $P$ has a terminal object in $\slicec{\cat{B}}$. \\
+		\item  $P$ has a terminal object in $\Fib$.
+	\end{enumerate}
+\end{thm}
+
+\begin{proof}
+	By the lifting and factorization of adjoints
+	
+	\begin{equation*}
+		\xymatrix{
+			\cat{E} \ar[dr]_{P} \ar@/^1pc/[rr]^{!} \ar[r]^{P} & B \ar@{=}[d] \ar[r]^{!} & 1 \ar@{=}[d]^{id}\\
+			& B \ar[r]_{!} & 1
+		}
+	\end{equation*}
+	Given $!_{\cat{B}} \adj \ter{B}$, it follows that $P \adj \ter{E}$ if and only if $!_\cat{E} \adj \ter{E}$ over $!_\cat{B} \adj \ter{B}$.
+\end{proof}
+
+\begin{thm}
+	Let $\cat{B}$ be a category with pullbacks. A fibration $\fib$ has fibred pullbacks if and only if $\cat{E}$ has and $P$ preserves pullbacks.
+\end{thm}
+
+\bibliographystyle{alpha}
+\bibliography{reference}
+
+
+\end{document}

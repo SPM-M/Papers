@@ -1,0 +1,70 @@
+\usepackage{amsmath, amsthm, amssymb, amsfonts, mathrsfs,relsize, thmtools, mathtools, stmaryrd, mlmodern, graphicx, setspace, geometry, float, quiver, xspace, hyperref, framed, tcolorbox, mathrsfs, enumerate, etoolbox}
+\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[document]{ragged2e}
+\usepackage[center]{titlesec}
+
+\xyoption{curve}
+\xyoption{2cell}
+\UseAllTwocells
+
+%Theoremstyle
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{example}[defn]{Example}
+\newtheorem{construction}[defn]{Construction}
+\newtheorem{notation}[defn]{Notation}
+
+\theoremstyle{remark}
+\newtheorem{remark}[defn]{Remark}
+\theoremstyle{plain}
+\newtheorem{thm}[defn]{Theorem}
+\newtheorem{lemma}[defn]{Lemma}
+\newtheorem{prop}[defn]{Proposition}
+\newtheorem{cor}[defn]{Corollary}
+
+% other symbols
+\newcommand{\isom}{\cong}
+\DeclareMathOperator{\idem}{E}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Inc}{Inc}
+\DeclareMathOperator{\img}{im}
+\DeclareMathOperator{\jac}{J}
+\DeclareMathOperator{\Fib}{\mathbf{Fib}}
+\DeclareMathOperator{\fib}{\textit{P} \colon \mathcal{E} \rightarrow \mathcal{B}}
+\DeclareMathOperator{\opfib}{\textit{P} \colon \mathcal{E}^{op} \longrightarrow \mathcal{B}^{op}}
+\DeclareMathOperator{\comp}{\circ}
+\DeclareMathOperator{\is}{\equiv}
+\DeclareMathOperator{\forw}{\Longrightarrow}
+\DeclareMathOperator{\back}{\Longleftarrow}
+\DeclareMathOperator{\adj}{\dashv}
+\DeclareMathOperator{\2cell}{\Longrightarrow}
+
+
+\newcommand{\dfib}[3]{\cat{#1} \colon \mathbb{#2} \rightarrow \mathbb{#3}}
+\newcommand{\compdfib}[4]{\cat{#1}_{#4} \colon \mathbb{#2}_{#4} \longrightarrow \mathbb{#3}_{#4}}
+\newcommand*{\dcat}[1]{\mathbb{#1}}
+\newcommand*{\bspan}[1]{\mathbb{S}\text{pan}(#1)}
+\newcommand*{\slice}[1]{\mathcal{#1}^2}
+\newcommand*{\slicec}[1]{\mathbf{Fib}/#1}
+\newcommand*{\dspan}[1]{\mathbb{S}\mathbf{pan}(#1)}
+\newcommand{\cat}[1]{\mathcal{#1}}
+\newcommand{\cart}[2]{\bar{#1}(#2) \colon #1 ^\ast #2 \rightarrow #2}
+\newcommand{\hspan}[5]{\xymatrix@=.7cm{#1 & #2 \ar[l]_{#4}  \ar[r]^{#5} & #3}}
+\newcommand{\cospan}[5]{\xymatrix@=.7cm{#1 \ar[r]^{#4} & #2 & #3 \ar[l]_{#5} & }}
+\newcommand{\mor}[3]{#1 \colon #2 \rightarrow #3}
+\newcommand{\proar}[2]{\xymatrix@=.7cm{#1 \ar[r]|-{\shortmid} & #2}}
+\newcommand{\inproar}[3]{\xymatrix@=.7cm{#2 \ar[r]|-{\shortmid}^{#1} & #3}}
+\newcommand{\lproar}[2]{\xymatrix@=.7cm{#1 \ar[l]|-{\shortmid} & #2}}
+\newcommand{\pushoutcorner}[1][dr]{\save*!/#1+1.2pc/#1:(1,-1)@^{|-}\restore}
+\newcommand{\pullbackcorner}[1][dr]{\save*!/#1-1.2pc/#1:(-1,1)@^{|-}\restore}
+\newcommand{\chapquote}[2]{\begin{quotation} \textit{#1} \end{quotation} \begin{flushright} - #2 \end{flushright} }
+\newcommand{\cleav}[2]{\varphi(#1,#2)}
+\newcommand{\ter}[1]{\mathbf{1}_{\mathcal{#1}}}
+
+\def\ie{i.e.\@\xspace}
