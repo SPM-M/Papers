@@ -41,7 +41,7 @@
 
 \begin{document}
 	\title{Fibred Tabulators} %%%%%%%%%%%%
-	\author[S.P Mthimkulu]{S.P Mthimkhldjgjfdslulu}
+	\author[S.P Mthimkulu]{S.P Mthimkulu}
 	\date{\today}
 	\address{5 Melrose Road, Muizenberg, Cape Town, South Africa}
 	\email{siyam@aims.ac.za}
@@ -78,7 +78,7 @@ In this section we recall some basic facts about fibrations and their examples.
 \end{defn}
 
 \begin{defn}
-	A functor $\fib$ is called \emph{fibred category} or a \emph{fibration} if for every $Y \in \cat{E}$ and $\mor{u}{I}{PY}$ there is a cartesian morphism $\cart{u}{E}$ over $u$. If $P$ is a fibration, a \emph{cleavage} for $P$ denoted $\varphi(u,E)$ is a choice of cartesian lifts for $u$ at $E$.
+	A functor $\fib$ is called \emph{fibred category} or a \emph{fibration} if for every $Y \in \cat{E}$ and $\mor{u}{I}{PY}$ there is a cartesian morphism $\cart{u}{E}$ over $u$. If $P$ is a fibration, a \emph{cleavage} for $P$ denoted $\varphi(u,E)$ is a choice of cartesian lifts for $u$ at $E$. Whence $P$ is called a cloven fibration.
 \end{defn}
 
 \subsection{Examples}
@@ -106,7 +106,7 @@ In \cite{TS} fibred finite limits are given in terms of terminal objects and pul
 
 In $\slicec{\cat{B}}$, the category of fibrations over $\cat{B}$, a fibration $P$ has fibred terminals if the fibred functor $\mor{F}{P}{id_B}$ has a right adjoint. Moreover, this property is characterized by preservation as follows.
 
-\begin{lemma}
+\begin{lemma}\label{fibredterminals}
 	Let $\cat{B}$ be a category with a terminal object $\ter{B}$. Then $\fib$ has fibred terminals if and only if $\cat{E}$ has a terminal $1_\cat{E}$ and $P(\ter{E})$ is a terminal in $\cat{B}$.
 \end{lemma}
 
@@ -144,9 +144,22 @@ Futhermore, we have the following theorem
 	Given $!_{\cat{B}} \adj \ter{B}$, it follows that $P \adj \ter{E}$ if and only if $!_\cat{E} \adj \ter{E}$ over $!_\cat{B} \adj \ter{B}$.
 \end{proof}
 
-\begin{thm}
-	Let $\cat{B}$ be a category with pullbacks. A fibration $\fib$ has fibred pullbacks if and only if $\cat{E}$ has and $P$ preserves pullbacks.
+\begin{defn}
+	A fibration $\fib$ has fibred pullbacks if every fibre has pullbacks and they are preserved by cartesianness.
+\end{defn}
+
+Similarly, fibred pullbacks can be characterised as follows.
+\begin{thm}\label{fibredpb}
+	Let $\cat{B}$ be a category with pullbacks. A fibration $\fib$ has fibred pullbacks if and only if $\cat{E}$ has and $P$ preserves pullbacks. 
 \end{thm}
+
+The following result is a consequence of Lemma \ref{fibredterminals} and Theorem \ref{fibredpb} 
+
+\begin{thm}
+	For a category $\cat{B}$ with finite limits, a fibration $\fib$ has fibred finite limits if and only if $\cat{E}$ has finite limits and $P$ preserves finite limits. 
+\end{thm}
+
+
 
 \bibliographystyle{alpha}
 \bibliography{reference}
