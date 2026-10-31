@@ -114,10 +114,10 @@ In $\slicec{\cat{B}}$, the category of fibrations over $\cat{B}$, a fibration $P
 	Consider the following diagram in $\Fib$
 	
 	\begin{equation*}
-		\xymatrix{
-			\cat{E} \ar[dd]_{P} \ar@<1.4ex>[rr]^{!} & \perp & 1 \ar@<1.4ex>[ll]^{\ter{E}} \ar@{=}[dd]^{id}\\
+		\xymatrix@=1cm{
+			\cat{E} \ar[dd]_{P} \ar@<1.4ex>[rr]^{!_\cat{E}} & \perp & 1 \ar@<1.4ex>[ll]^{\ter{E}} \ar@{=}[dd]^{id}\\
 			\\
-			B \ar@<1.4ex>[rr]^{!} & \perp & 1 \ar@<1.4ex>[ll]^{\ter{B}}
+			B \ar@<1.4ex>[rr]^{!_\cat{B}} & \perp & 1 \ar@<1.4ex>[ll]^{\ter{B}}
 		}
 	\end{equation*}
 \end{proof}
@@ -158,6 +158,27 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 \begin{thm}
 	For a category $\cat{B}$ with finite limits, a fibration $\fib$ has fibred finite limits if and only if $\cat{E}$ has finite limits and $P$ preserves finite limits. 
 \end{thm}
+
+\section{Double Categories}
+
+In this section investigate fibred limits of double fibrations. In particular, we introduce the notion of \emph{fibred tabulators} \ie, a strict double fibration of double categories with tabulators.
+
+\begin{defn}
+	A double category $\dcat{D}$ is a pseudo category object in $\Cat$, it consists of the following diagram 
+	\begin{equation*}
+		\xymatrix{
+			\dcat{D}_1 \times_{\dcat{D}_0}\dcat{D}_1 \ar[r]|-{\odot} & \dcat{D}_1 \ar@<1ex>[r]^{s} \ar@<-1ex>[r]_{t} & \dcat{D}_0 \ar[l]|-{i}
+		}
+	\end{equation*}
+	We call $\dcat{D}_0$ the category of objects and vertical arrows and $\dcat{D}_1$ the category of proarrows and cells:
+	\begin{equation*}
+		\xymatrix{
+				A \ar[r]|-{\bullet}^-M \ar[d]_f \ar@{}[dr]|{\theta} & B \ar[d]^g \\  
+				 C \ar[r]|-{\bullet}_-N & D  
+		}
+	\end{equation*}
+	The composition of cells in $\dcat{D}_1$ is stricter in the vertical direction and weaker in the horizontal direction. We refer to cells with proarrow (resp. vertical) identities as \emph{horizontal} (resp. \emph{vertical}) globular cells. 
+\end{defn}
 
 
 
