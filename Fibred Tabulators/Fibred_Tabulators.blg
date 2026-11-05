@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Fibred_Tabulators.aux
 The style file: alpha.bst
 Database file #1: reference.bib
-You've used 2 entries,
+You've used 3 entries,
             2543 wiz_defined-function locations,
-            572 strings with 4709 characters,
-and the built_in function-call counts, 581 in all, are:
-= -- 50
-> -- 16
+            580 strings with 4860 characters,
+and the built_in function-call counts, 1216 in all, are:
+= -- 116
+> -- 47
 < -- 3
-+ -- 4
-- -- 4
-* -- 33
-:= -- 102
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 9
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 28
-empty$ -- 52
-format.name$ -- 8
-if$ -- 117
++ -- 16
+- -- 16
+* -- 90
+:= -- 204
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 17
+chr.to.int$ -- 3
+cite$ -- 3
+duplicate$ -- 42
+empty$ -- 97
+format.name$ -- 21
+if$ -- 243
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 2
-newline$ -- 13
-num.names$ -- 6
-pop$ -- 17
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 9
+pop$ -- 22
 preamble$ -- 1
-purify$ -- 12
+purify$ -- 21
 quote$ -- 0
-skip$ -- 21
+skip$ -- 32
 stack$ -- 0
-substring$ -- 14
-swap$ -- 4
+substring$ -- 94
+swap$ -- 5
 text.length$ -- 3
 text.prefix$ -- 2
 top$ -- 0
-type$ -- 12
+type$ -- 20
 warning$ -- 0
-while$ -- 4
-width$ -- 4
-write$ -- 27
+while$ -- 9
+width$ -- 6
+write$ -- 40

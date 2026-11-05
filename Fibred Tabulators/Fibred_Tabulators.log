@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.3.6)  31 OCT 2026 13:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.3.6)  5 NOV 2026 17:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1208,19 +1208,42 @@ line 109.
 Package hyperref Info: bookmark level for unknown thm defaults to 0 on input li
 ne 128.
  <xymatrix 3x2 313>
-
-[2]
 pdfTeX warning (ext4): destination with the same identifier (name{defn.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.167 	A
-         double category $\dcat{D}$ is a pseudo category object in $\Cat$, i...
-<xymatrix 3x1 186> <xymatrix 2x2 249> (./Fibred_Tabulators.bbl)
-LaTeX Font Info:    Trying to load font information for T1+mlmtt on input line 
-189.
+l.168 	A
+         double category $\dcat{D}$ is a pseudo category in $\Cat$, it consi...
+<xymatrix 3x1 186>
 
-(/usr/share/texlive/texmf-dist/tex/latex/mlmodern/t1mlmtt.fd
+[2] <xymatrix 2x2 249>
+pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.185 	G
+        iven a double category $\dcat{D}$, we  can form a \emph{horizontal b...
+Package hyperref Info: bookmark level for unknown notation defaults to 0 on inp
+ut line 190.
+
+pdfTeX warning (ext4): destination with the same identifier (name{example.4}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.196 	L
+        et $\dcat{D}^2$ be the slice double category of $\dcat{D}$ over itse...
+
+pdfTeX warning (ext4): destination with the same identifier (name{example.5}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.201 	L
+        et $\cat{C}$ be a category with pullbacks, we define a double catego...
+<xymatrix 2x1 54> <xymatrix 3x1 96> <xymatrix 3x2 264> (./Fibred_Tabulators.bbl
+)
+LaTeX Font Info:    Trying to load font information for T1+mlmtt on input line 
+217.
+ (/usr/share/texlive/texmf-dist/tex/latex/mlmodern/t1mlmtt.fd
 File: t1mlmtt.fd 2021/01/11 v1.0 Font defs for mlmodern
 )
 
@@ -1230,14 +1253,14 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Fibred_Tabulators.out' has not changed.
-(rerunfilecheck)             Checksum: C899D46208647D0EDE1358E8CCABA5D4;484.
+(rerunfilecheck)             Checksum: 271F8896010009EAB56688D269ACF4C9;706.
  ) 
 Here is how much of TeX's memory you used:
- 31874 strings out of 473197
- 600429 string characters out of 5718606
- 1130447 words of memory out of 5000000
- 54300 multiletter control sequences out of 15000+600000
- 634249 words of font info for 93 fonts, out of 8000000 for 9000
+ 31892 strings out of 473197
+ 600727 string characters out of 5718606
+ 1130491 words of memory out of 5000000
+ 54308 multiletter control sequences out of 15000+600000
+ 640225 words of font info for 95 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  118i,14n,122p,3272b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/mlmodern/mlmbx10.pfb></usr/
@@ -1260,10 +1283,10 @@ ern/mlmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mlmodern/mlmtt
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on Fibred_Tabulators.pdf (3 pages, 288610 bytes).
+Output written on Fibred_Tabulators.pdf (3 pages, 296089 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

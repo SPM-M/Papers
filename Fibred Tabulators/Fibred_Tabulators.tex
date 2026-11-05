@@ -161,10 +161,11 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 
 \section{Double Categories}
 
-In this section investigate fibred limits of double fibrations. In particular, we introduce the notion of \emph{fibred tabulators} \ie, a strict double fibration of double categories with tabulators.
+\subsection{Basic Notions}
+%In this section investigate fibred limits of double fibrations. In particular, we introduce the notion of \emph{fibred tabulators} \ie, a strict double fibration of double categories with tabulators.
 
 \begin{defn}
-	A double category $\dcat{D}$ is a pseudo category object in $\Cat$, it consists of the following diagram 
+	A double category $\dcat{D}$ is a pseudo category in $\Cat$, it consists of the following diagram 
 	\begin{equation*}
 		\xymatrix{
 			\dcat{D}_1 \times_{\dcat{D}_0}\dcat{D}_1 \ar[r]|-{\odot} & \dcat{D}_1 \ar@<1ex>[r]^{s} \ar@<-1ex>[r]_{t} & \dcat{D}_0 \ar[l]|-{i}
@@ -177,8 +178,35 @@ In this section investigate fibred limits of double fibrations. In particular, w
 				 C \ar[r]|-{\bullet}_-N & D  
 		}
 	\end{equation*}
-	The composition of cells in $\dcat{D}_1$ is stricter in the vertical direction and weaker in the horizontal direction. We refer to cells with proarrow (resp. vertical) identities as \emph{horizontal} (resp. \emph{vertical}) globular cells. 
+	We refer to $M$ and $N$ as the internal domain and codomain of $\theta$ respectively, whilst $f$ and $g$ are the external source and target respectively. Cells with proarrow (resp. vertical) identities will be called \emph{horizontal} (resp. \emph{vertical}) \emph{globular} cells. The composition is strict in the vertical direction and weaker in the horizontal direction. For convention, we assume our double categories to be pseudo in the sense of \cite{LambertM}.
 \end{defn}
+
+\begin{defn}
+	Given a double category $\dcat{D}$, we  can form a \emph{horizontal bicategory} $\mathcal{H}(\dcat{D})$, whose objects are the objects of $\dcat{D}$, 1-cells are the proarrows of $\dcat{D}$, and $2$-cells are given by vertical globular cells. Dually, we can form a \emph{vertical 2-category} $\mathcal{V}(\dcat{D})$ whose objects are the objects of $\dcat{D}$, $1$-cells are the vertical arrows, and $2$-cells given by horizontal globular cells. 
+\end{defn}
+
+
+\begin{notation}
+	For cells $\alpha$ and $\beta$, we shall write $\frac{\alpha}{\beta}$ as their vertical composition.
+\end{notation}
+
+\subsection{Examples}
+
+\begin{example}
+	Let $\dcat{D}^2$ be the slice double category of $\dcat{D}$ over itself with external source and target operations coming from $\dcat{D}$.
+\end{example}
+
+
+\begin{example}
+	Let $\cat{C}$ be a category with pullbacks, we define a double category $\dcat{S}\textbf{pan}(\cat{C})$ whose vertical category is $\cat{C}$, whose proarrows $\pro{A}{B}$  are spans $\hspan{A}{C}{B}{f}{g}$ in $\cat{C}$, and whose cells are commuting squares:
+	\begin{equation*}
+		\xymatrix{
+			A \ar[d] & C \ar[d] \ar[l] \ar[r] & B \ar[d] \\
+			D & F \ar[l] \ar[r] & E
+		}
+	\end{equation*}
+	in $\cat{C}$. Horizontal composition is given by pullbacks.
+\end{example}
 
 
 

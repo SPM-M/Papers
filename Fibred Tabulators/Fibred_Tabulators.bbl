@@ -1,4 +1,9 @@
-\begin{thebibliography}{Jac99}
+\begin{thebibliography}{CLPS22}
+
+\bibitem[CLPS22]{LambertM}
+G.~S.~H. Cruttwell, M.~J. Lambert, D.~A. Pronk, and M.~Szyld.
+\newblock Double fibrations.
+\newblock {\em Theory Appl. Categ.}, 38:Paper No. 35, 1326--1394, 2022.
 
 \bibitem[Jac99]{JacobsCLTT}
 B.~Jacobs.
