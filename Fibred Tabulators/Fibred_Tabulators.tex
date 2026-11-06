@@ -178,7 +178,7 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 				 C \ar[r]|-{\bullet}_-N & D  
 		}
 	\end{equation*}
-	We refer to $M$ and $N$ as the internal domain and codomain of $\theta$ respectively, whilst $f$ and $g$ are the external source and target respectively. Cells with proarrow (resp. vertical) identities will be called \emph{horizontal} (resp. \emph{vertical}) \emph{globular} cells. The composition is strict in the vertical direction and weaker in the horizontal direction. For convention, we assume our double categories to be pseudo in the sense of \cite{LambertM}.
+	We refer to $M$ and $N$ as the internal domain and codomain of $\theta$ respectively, whilst $f$ and $g$ are the external source and target respectively. Cells with proarrow (resp. vertical) identities will be called \emph{horizontal} (resp. \emph{vertical}) \emph{globular} cells. Composition is strict in the vertical direction and weaker in the horizontal direction. For convention, we assume our double categories to be pseudo in the sense of \cite{LambertM}.
 \end{defn}
 
 \begin{defn}
@@ -206,6 +206,17 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 		}
 	\end{equation*}
 	in $\cat{C}$. Horizontal composition is given by pullbacks.
+\end{example}
+
+\begin{example}
+	The double category $\dcat{R}$el(Set) has objects as sets and vertical arrows as set-functions. The proarrows are given by relations and there is a unique cell
+	\begin{equation*}
+		\xymatrix{
+			A  \ar[d]_f \ar[r]|-{\bullet}^R \ar@{}[dr]|{\Downarrow} & B \ar[d]^g \\
+			C \ar[r]|-{\bullet}_{S}& D
+		}
+	\end{equation*}
+	whenever $R(a,b) \implies S(f(a),g(b))$ holds for all $a \in A, b \in B$.
 \end{example}
 
 
