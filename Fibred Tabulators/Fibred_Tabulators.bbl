@@ -1,6 +1,6 @@
 \begin{thebibliography}{CLPS22}
 
-\bibitem[CLPS22]{LambertM}
+\bibitem[CLPS22]{Crutt}
 G.~S.~H. Cruttwell, M.~J. Lambert, D.~A. Pronk, and M.~Szyld.
 \newblock Double fibrations.
 \newblock {\em Theory Appl. Categ.}, 38:Paper No. 35, 1326--1394, 2022.
@@ -10,6 +10,11 @@ B.~Jacobs.
 \newblock {\em Categorical Logic and Type Theory}, volume 141 of {\em Studies
   in Logic and the Foundations of Mathematics}.
 \newblock North Holland, 1999.
+
+\bibitem[MF06]{NMF}
+N.~Martins-Ferreira.
+\newblock Pseudo-categories.
+\newblock {\em J. Homotopy Relat. Struct.}, 1(1):47--78, 2006.
 
 \bibitem[Str18]{TS}
 Thomas Streicher.

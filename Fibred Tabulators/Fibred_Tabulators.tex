@@ -168,7 +168,7 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 	A double category $\dcat{D}$ is a pseudo category in $\Cat$, it consists of the following diagram 
 	\begin{equation*}
 		\xymatrix{
-			\dcat{D}_1 \times_{\dcat{D}_0}\dcat{D}_1 \ar[r]|-{\odot} & \dcat{D}_1 \ar@<1ex>[r]^{s} \ar@<-1ex>[r]_{t} & \dcat{D}_0 \ar[l]|-{i}
+			\dcat{D}_1 \times_{\dcat{D}_0}\dcat{D}_1 \ar[r]^(.6){\odot} & \dcat{D}_1 \ar@<1ex>[r]^{s} \ar@<-1ex>[r]_{t} & \dcat{D}_0 \ar[l]|-{i}
 		}
 	\end{equation*}
 	We call $\dcat{D}_0$ the category of objects and vertical arrows and $\dcat{D}_1$ the category of proarrows and cells:
@@ -178,7 +178,7 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 				 C \ar[r]|-{\bullet}_-N & D  
 		}
 	\end{equation*}
-	We refer to $M$ and $N$ as the internal domain and codomain of $\theta$ respectively, whilst $f$ and $g$ are the external source and target respectively. Cells with proarrow (resp. vertical) identities will be called \emph{horizontal} (resp. \emph{vertical}) \emph{globular} cells. Composition is strict in the vertical direction and weaker in the horizontal direction. For convention, we assume our double categories to be pseudo in the sense of \cite{LambertM}.
+	We refer to $M$ and $N$ as the internal domain and codomain of $\theta$ respectively, whilst $f$ and $g$ are the external source and target respectively. Cells with proarrow (resp. vertical) identities will be called \emph{horizontal} (resp. \emph{vertical}) \emph{globular} cells. Composition is strict in the vertical direction and weaker in the horizontal direction. For convention, we assume our double categories to be pseudo in the sense of \cite{Crutt}.
 \end{defn}
 
 \begin{defn}
@@ -221,22 +221,7 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 
 
 \begin{defn}
-	Let $\dcat{E}$ and $\dcat{B}$ be pseudo categories internal to the $2$-category $\cat{K}$ with $2$-pullbacks. A \emph{lax functor} $\dfib{L}{E}{B}$ consists of arrows $\funct{L_0}{E_0}{D_0}$ and $\funct{L_1}{E_1}{B_1}$ together with comparison morphisms given by 
-%%		\xymatrix{
-%%			
-%%%		} \qquad \qquad \qquad
-%%%		
-%%%		\xymatrix{
-%%%			E_0 \ar[d]_{L_0} \ar[r]^{i} \ar@{}[dr]|{\xRightarrow{\iota}} & E_1 \ar[d]^{L_1}\\
-%%%			B_0 \ar[d]_{i} & B_1
-%%%		}
-%		
-%		\vcenter{\vbox{\xymatrix{
-%					E_1 \times_{E_0} E_1 \ar[r]^(.6){\odot_E}  \ar[d]_{L_1 \times_{L_0} L_1} \ar@{}[dr]|{\xRightarrow{\phi}}& E_1 \ar[d]^{L_1}\\
-%					B_1 \times_{B_0} E_1 \ar[r]_(.6){\odot_B} & B_1 
-%		}}}
-%		\qquad
-
+	Let $\dcat{E}$ and $\dcat{B}$ be pseudo categories internal to a $2$-category $\cat{K}$ with $2$-pullbacks. A \emph{lax functor} $\dfib{L}{E}{B}$ consists of arrows $\funct{L_0}{E_0}{D_0}$ and $\funct{L_1}{E_1}{B_1}$ together with comparison morphisms given by 
 
 	\begin{equation*}
 		\vcenter{\vbox{\xymatrix{
@@ -249,8 +234,34 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 				B_0 \ar[r]_{i} & B_1	
 		}}}
 	\end{equation*}
-	such that the source and target are strictly preserving. Moreover, $\psi$, $\iota$, and the associators and unitors of $\dcat{E}$ and $\dcat{B}$  satisfy the usual coherence conditions  
+	such that the source and target are strictly preserving. Moreover, $\phi$, $\iota$, and the associators and unitors of $\dcat{E}$ and $\dcat{B}$  satisfy the usual coherence conditions as in \cite{NMF}. A lax functor is called $\mathbf{strict}$ if $\phi$ and $\iota$ are identities.
+\end{defn}	
+	
+\begin{remark}
+	A strict functor in $\Cat$ corresponds to a strict functor between double categories.
+\end{remark}
+
+\begin{lemma}[\cite{Crutt}]
+	Given a diagram $s \colon P_1 \to P_0 \leftarrow P_1 \colon t$ in $\mathbf{cFib}$, a pseudo category structure in $\mathbf{Fib}$ (resp. $\mathbf{cFib}$) is the same as two pseudo double category structure obtained by applying the top and bottom 2-functors,
+\end{lemma}
+
+\begin{defn}[\cite{Crutt}]
+	A strict double functor $\dfib{P}{E}{B}$ between pseudo double categories given by 
+	
+	\begin{equation*}
+		\xymatrix@=0.5cm{
+			\cat{E}_1 \times_{\cat{E}_0} \cat{E}_1 \ar[rr]|-{\odot_\cat{E}} \ar[dd]_{\cat{F}_1 \times_{\cat{F}_0} \cat{F}_1} && \cat{E}_1 \ar[dd]_{\cat{F}_1} \ar@<1ex>[rr]^{s_\cat{E}} \ar@<-1ex>[rr]_{t_\cat{E}} && \cat{E}_0 \ar[dd]^{\cat{F}_0} \ar[ll]|-{i_\cat{E}} \\
+			\\
+			\cat{B}_1 \times_{\cat{B}_0} \cat{B}_1 \ar[rr]|-{\odot_\cat{B}} && \cat{B}_1 \ar@<1ex>[rr]^{s_\cat{B}} \ar@<-1ex>[rr]_{t_\cat{B}} && \cat{B}_0 \ar[ll]|-{i_\cat{B}}
+		}
+	\end{equation*}
+	defines a \textbf{double fibration} when $P_0$ and $P_1$ are cloven fibrations, such that $s_{\cat{E}}$ and $t_{\cat{B}}$ preserve cleavages simultaneously, and $\odot_\cat{E}$ and $i_\cat{E}$ preserve cartesian morphisms.
 \end{defn}
+
+\begin{remark}
+	A  double fibration $\dfib{P}{E}{B}$ is a pseudo category internal to $\mathbf{Fib}$ such that the source and target maps preserve chosen cleavages. A cleavage for $P$ is a choice of cleav
+\end{remark}
+
 
 
 \bibliographystyle{alpha}
