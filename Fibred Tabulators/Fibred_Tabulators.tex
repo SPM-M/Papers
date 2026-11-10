@@ -101,7 +101,7 @@ Let $\cat{C}^2$ denote the slice category of $\cat{C}$ over itself
 In \cite{TS} fibred finite limits are given in terms of terminal objects and pullbacks. Furthermore, \cite{JacobsCLTT} captures the notion of fibred terminal objects in $\mathbf{Fib}$ using fibred adjunctions. 
 
 \begin{defn}
-	A fibration $\fib$ has fibred terminal objects if every fibre $P(I)$ has a terminal object $1_I$ and they are preserved by cartesianness.
+	A fibration $\fib$ has fibred terminal objects if every fibre $P(I)$ has a terminal object $\ter{I}$ and they are preserved by cartesianness.
 \end{defn}
 
 In $\slicec{\cat{B}}$, the category of fibrations over $\cat{B}$, a fibration $P$ has fibred terminals if the fibred functor $\mor{F}{P}{id_B}$ has a right adjoint. Moreover, this property is characterized by preservation as follows.
@@ -132,17 +132,17 @@ Futhermore, we have the following theorem
 	\end{enumerate}
 \end{thm}
 
-\begin{proof}
-	By the lifting and factorization of adjoints
-	
-	\begin{equation*}
-		\xymatrix{
-			\cat{E} \ar[dr]_{P} \ar@/^1pc/[rr]^{!} \ar[r]^{P} & B \ar@{=}[d] \ar[r]^{!} & 1 \ar@{=}[d]^{id}\\
-			& B \ar[r]_{!} & 1
-		}
-	\end{equation*}
-	Given $!_{\cat{B}} \adj \ter{B}$, it follows that $P \adj \ter{E}$ if and only if $!_\cat{E} \adj \ter{E}$ over $!_\cat{B} \adj \ter{B}$.
-\end{proof}
+%\begin{proof}
+%	By the lifting and factorization of adjoints
+%	
+%	\begin{equation*}
+%		\xymatrix{
+%			\cat{E} \ar[dr]_{P} \ar@/^1pc/[rr]^{!} \ar[r]^{P} & B \ar@{=}[d] \ar[r]^{!} & 1 \ar@{=}[d]^{id}\\
+%			& B \ar[r]_{!} & 1
+%		}
+%	\end{equation*}
+%	Given $!_{\cat{B}} \adj \ter{B}$, it follows that $P \adj \ter{E}$ if and only if $!_\cat{E} \adj \ter{E}$ over $!_\cat{B} \adj \ter{B}$.
+%\end{proof}
 
 \begin{defn}
 	A fibration $\fib$ has fibred pullbacks if every fibre has pullbacks and they are preserved by cartesianness.
@@ -219,6 +219,38 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 	whenever $R(a,b) \implies S(f(a),g(b))$ holds for all $a \in A, b \in B$.
 \end{example}
 
+
+\begin{defn}
+	Let $\dcat{E}$ and $\dcat{B}$ be pseudo categories internal to the $2$-category $\cat{K}$ with $2$-pullbacks. A \emph{lax functor} $\dfib{L}{E}{B}$ consists of arrows $\funct{L_0}{E_0}{D_0}$ and $\funct{L_1}{E_1}{B_1}$ together with comparison morphisms given by 
+%%		\xymatrix{
+%%			
+%%%		} \qquad \qquad \qquad
+%%%		
+%%%		\xymatrix{
+%%%			E_0 \ar[d]_{L_0} \ar[r]^{i} \ar@{}[dr]|{\xRightarrow{\iota}} & E_1 \ar[d]^{L_1}\\
+%%%			B_0 \ar[d]_{i} & B_1
+%%%		}
+%		
+%		\vcenter{\vbox{\xymatrix{
+%					E_1 \times_{E_0} E_1 \ar[r]^(.6){\odot_E}  \ar[d]_{L_1 \times_{L_0} L_1} \ar@{}[dr]|{\xRightarrow{\phi}}& E_1 \ar[d]^{L_1}\\
+%					B_1 \times_{B_0} E_1 \ar[r]_(.6){\odot_B} & B_1 
+%		}}}
+%		\qquad
+
+
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix{
+				E_1 \times_{E_0} E_1 \ar[r]^(.6){\odot_E}  \ar[d]_{L_1 \times_{L_0} L_1} \ar@{}[dr]|{\xRightarrow{\phi}}& E_1 \ar[d]^{L_1}\\
+				B_1 \times_{B_0} E_1 \ar[r]_(.6){\odot_B} & B_1
+		}}}
+		\qquad \qquad \qquad
+		\vcenter{\vbox{\xymatrix{
+				E_0 \ar[d]_{L_0} \ar[r]^{i} \ar@{}[dr]|{\xRightarrow{\iota}} & E_1 \ar[d]^{L_1}\\
+				B_0 \ar[r]_{i} & B_1	
+		}}}
+	\end{equation*}
+	such that the source and target are strictly preserving. Moreover, $\psi$, $\iota$, and the associators and unitors of $\dcat{E}$ and $\dcat{B}$  satisfy the usual coherence conditions  
+\end{defn}
 
 
 \bibliographystyle{alpha}
