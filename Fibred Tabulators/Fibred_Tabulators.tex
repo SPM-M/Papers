@@ -159,6 +159,7 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 	For a category $\cat{B}$ with finite limits, a fibration $\fib$ has fibred finite limits if and only if $\cat{E}$ has finite limits and $P$ preserves finite limits. 
 \end{thm}
 
+
 \section{Double Categories}
 
 \subsection{Basic Notions}
@@ -168,7 +169,7 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 	A double category $\dcat{D}$ is a pseudo category in $\Cat$, it consists of the following diagram 
 	\begin{equation*}
 		\xymatrix{
-			\dcat{D}_1 \times_{\dcat{D}_0}\dcat{D}_1 \ar[r]^(.6){\odot} & \dcat{D}_1 \ar@<1ex>[r]^{s} \ar@<-1ex>[r]_{t} & \dcat{D}_0 \ar[l]|-{i}
+			\dcat{D}_2 \ar[r]^(.6){\odot} & \dcat{D}_1 \ar@<1ex>[r]^{s} \ar@<-1ex>[r]_{t} & \dcat{D}_0 \ar[l]|-{i}
 		}
 	\end{equation*}
 	We call $\dcat{D}_0$ the category of objects and vertical arrows and $\dcat{D}_1$ the category of proarrows and cells:
@@ -225,8 +226,8 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 
 	\begin{equation*}
 		\vcenter{\vbox{\xymatrix{
-				E_1 \times_{E_0} E_1 \ar[r]^(.6){\odot_E}  \ar[d]_{L_1 \times_{L_0} L_1} \ar@{}[dr]|{\xRightarrow{\phi}}& E_1 \ar[d]^{L_1}\\
-				B_1 \times_{B_0} E_1 \ar[r]_(.6){\odot_B} & B_1
+				E_2 \ar[r]^(.5){\odot_E}  \ar[d]_{L_2} \ar@{}[dr]|{\xRightarrow{\phi}}& E_1 \ar[d]^{L_1}\\
+				B_2 \ar[r]_(.5){\odot_B} & B_1
 		}}}
 		\qquad \qquad \qquad
 		\vcenter{\vbox{\xymatrix{
@@ -236,11 +237,33 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 	\end{equation*}
 	such that the source and target are strictly preserving. Moreover, $\phi$, $\iota$, and the associators and unitors of $\dcat{E}$ and $\dcat{B}$  satisfy the usual coherence conditions as in \cite{NMF}. A lax functor is called $\mathbf{strict}$ if $\phi$ and $\iota$ are identities.
 \end{defn}	
-	
+
 \begin{remark}
+	
 	A strict functor in $\Cat$ corresponds to a strict functor between double categories.
 \end{remark}
 
+We recall the notion of double limits \ie, limits in double categories introduced in \cite{LMP}. However, our limits will be analogous to limits of Grandis and Par\'{e}. 
+
+\begin{defn}[\cite{SpanDPP}]
+	A double category $\dcat{E}$ has \emph{vertical pullbacks} if the diagram
+	\begin{equation*}
+		\xymatrix{
+			\dcat{E}_2 \ar[r]^(.5){\odot} & \dcat{E}_1 \ar@<1ex>[r]^{s} \ar@<-1ex>[r]_{t} & \dcat{E}_0 \ar[l]|-{i}
+		}
+	\end{equation*}
+	lies in $\mathbf{PBCat}$ the category of categories with pullbacks and pullback-preserving functors.
+\end{defn}
+
+A functor $\funct{G}{\dcat{E}}{\dcat{A}}$ between double categories with vertical pullbacks preserves pullbacks if it preserves pullbacks componentwise. When this is the case, we shall call $G$ a pullback-preserving functor. For the rest of the paper, we shall refer to vertical pullbacks by v-pullbacks.
+
+\begin{remark}
+	The universal property of v-pullbacks in double categories generalizes the universal property of 2-pullbacks. $\odot$ preserving pullbacks amounts to a  functorial choice of pullbacks, see \cite{LMP}.
+\end{remark}
+	
+
+
+\section{Double Fibrations}
 \begin{lemma}[\cite{Crutt}]
 	Given a diagram $s \colon P_1 \to P_0 \leftarrow P_1 \colon t$ in $\mathbf{cFib}$, a pseudo category structure in $\mathbf{Fib}$ (resp. $\mathbf{cFib}$) is the same as two pseudo double category structure obtained by applying the top and bottom 2-functors,
 \end{lemma}
@@ -250,21 +273,23 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 	
 	\begin{equation*}
 		\xymatrix@=0.5cm{
-			\cat{E}_1 \times_{\cat{E}_0} \cat{E}_1 \ar[rr]|-{\odot_\cat{E}} \ar[dd]_{\cat{F}_1 \times_{\cat{F}_0} \cat{F}_1} && \cat{E}_1 \ar[dd]_{\cat{F}_1} \ar@<1ex>[rr]^{s_\cat{E}} \ar@<-1ex>[rr]_{t_\cat{E}} && \cat{E}_0 \ar[dd]^{\cat{F}_0} \ar[ll]|-{i_\cat{E}} \\
+			\cat{E}_2 \ar[rr]^{\odot_\cat{E}} \ar[dd]_{\cat{P}_2} && \cat{E}_1 \ar[dd]_{\cat{P}_1} \ar@<1ex>[rr]^{s_\cat{E}} \ar@<-1ex>[rr]_{t_\cat{E}} && \cat{E}_0 \ar[dd]^{\cat{P}_0} \ar[ll]|-{i_\cat{E}} \\
 			\\
-			\cat{B}_1 \times_{\cat{B}_0} \cat{B}_1 \ar[rr]|-{\odot_\cat{B}} && \cat{B}_1 \ar@<1ex>[rr]^{s_\cat{B}} \ar@<-1ex>[rr]_{t_\cat{B}} && \cat{B}_0 \ar[ll]|-{i_\cat{B}}
+			\cat{B}_2 \ar[rr]_{\odot_\cat{B}} && \cat{B}_1 \ar@<1ex>[rr]^{s_\cat{B}} \ar@<-1ex>[rr]_{t_\cat{B}} && \cat{B}_0 \ar[ll]|-{i_\cat{B}}
 		}
 	\end{equation*}
 	defines a \textbf{double fibration} when $P_0$ and $P_1$ are cloven fibrations, such that $s_{\cat{E}}$ and $t_{\cat{B}}$ preserve cleavages simultaneously, and $\odot_\cat{E}$ and $i_\cat{E}$ preserve cartesian morphisms.
 \end{defn}
 
 \begin{remark}
-	A  double fibration $\dfib{P}{E}{B}$ is a pseudo category internal to $\mathbf{Fib}$ such that the source and target maps preserve chosen cleavages. A cleavage for $P$ is a choice of cleav
+	A  double fibration $\dfib{P}{E}{B}$ is a pseudo category internal to $\mathbf{Fib}$ such that the source and target maps preserve chosen cleavages. A cleavage for $P$ is chosen componentwise. Since $s_{\cat{E}}$ and $t_{\cat{B}}$ preserve cleavages, they are morphisms in $\mathbf{cFib}$.
 \end{remark}
 
 
 
-\bibliographystyle{alpha}
+
+
+\bibliographystyle{ieeetr}
 \bibliography{reference}
 
 

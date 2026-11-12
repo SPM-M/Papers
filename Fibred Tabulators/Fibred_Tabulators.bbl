@@ -5,6 +5,17 @@ G.~S.~H. Cruttwell, M.~J. Lambert, D.~A. Pronk, and M.~Szyld.
 \newblock Double fibrations.
 \newblock {\em Theory Appl. Categ.}, 38:Paper No. 35, 1326--1394, 2022.
 
+\bibitem[DPP10]{SpanDPP}
+Robert Dawson, Robert Par\'e, and Dorette Pronk.
+\newblock The span construction.
+\newblock {\em Theory Appl. Categ.}, 24:No. 13, 302--377, 2010.
+
+\bibitem[GP99]{LMP}
+Marco Grandis and Robert Par{\'e}.
+\newblock Limits in double categories.
+\newblock {\em Cah. Topologie G{\'e}om. Diff{\'e}r. Cat{\'e}goriques},
+  40(3):162--220, 1999.
+
 \bibitem[Jac99]{JacobsCLTT}
 B.~Jacobs.
 \newblock {\em Categorical Logic and Type Theory}, volume 141 of {\em Studies
