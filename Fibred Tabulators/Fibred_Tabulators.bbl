@@ -1,35 +1,34 @@
-\begin{thebibliography}{CLPS22}
+\begin{thebibliography}{1}
 
-\bibitem[CLPS22]{Crutt}
-G.~S.~H. Cruttwell, M.~J. Lambert, D.~A. Pronk, and M.~Szyld.
-\newblock Double fibrations.
-\newblock {\em Theory Appl. Categ.}, 38:Paper No. 35, 1326--1394, 2022.
+\bibitem{TS}
+T.~Streicher, ``Fibered {Categories} a la {Jean} {Benabou}.'' Preprint,
+  {arXiv}:1801.02927 [math.{CT}] (2018), 2018.
 
-\bibitem[DPP10]{SpanDPP}
-Robert Dawson, Robert Par\'e, and Dorette Pronk.
-\newblock The span construction.
-\newblock {\em Theory Appl. Categ.}, 24:No. 13, 302--377, 2010.
-
-\bibitem[GP99]{LMP}
-Marco Grandis and Robert Par{\'e}.
-\newblock Limits in double categories.
-\newblock {\em Cah. Topologie G{\'e}om. Diff{\'e}r. Cat{\'e}goriques},
-  40(3):162--220, 1999.
-
-\bibitem[Jac99]{JacobsCLTT}
-B.~Jacobs.
-\newblock {\em Categorical Logic and Type Theory}, volume 141 of {\em Studies
-  in Logic and the Foundations of Mathematics}.
+\bibitem{JacobsCLTT}
+B.~Jacobs, {\em Categorical Logic and Type Theory}, vol.~141 of {\em Studies in
+  Logic and the Foundations of Mathematics}.
 \newblock North Holland, 1999.
 
-\bibitem[MF06]{NMF}
-N.~Martins-Ferreira.
-\newblock Pseudo-categories.
-\newblock {\em J. Homotopy Relat. Struct.}, 1(1):47--78, 2006.
+\bibitem{Crutt}
+G.~S.~H. Cruttwell, M.~J. Lambert, D.~A. Pronk, and M.~Szyld, ``Double
+  fibrations,'' {\em Theory Appl. Categ.}, vol.~38, pp.~Paper No. 35,
+  1326--1394, 2022.
 
-\bibitem[Str18]{TS}
-Thomas Streicher.
-\newblock Fibered {Categories} a la {Jean} {Benabou}.
-\newblock Preprint, {arXiv}:1801.02927 [math.{CT}] (2018), 2018.
+\bibitem{NMF}
+N.~Martins-Ferreira, ``Pseudo-categories,'' {\em J. Homotopy Relat. Struct.},
+  vol.~1, no.~1, pp.~47--78, 2006.
+
+\bibitem{LMP}
+M.~Grandis and R.~Par{\'e}, ``Limits in double categories,'' {\em Cah.
+  Topologie G{\'e}om. Diff{\'e}r. Cat{\'e}goriques}, vol.~40, no.~3,
+  pp.~162--220, 1999.
+
+\bibitem{RS}
+R.~Street, ``Limits indexed by category-valued 2-functors,'' {\em J. Pure Appl.
+  Algebra}, vol.~8, pp.~149--181, 1976.
+
+\bibitem{SpanDPP}
+R.~Dawson, R.~Par\'e, and D.~Pronk, ``The span construction,'' {\em Theory
+  Appl. Categ.}, vol.~24, pp.~No. 13, 302--377, 2010.
 
 \end{thebibliography}

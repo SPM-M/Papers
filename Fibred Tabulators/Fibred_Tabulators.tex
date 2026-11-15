@@ -144,15 +144,21 @@ Futhermore, we have the following theorem
 %	Given $!_{\cat{B}} \adj \ter{B}$, it follows that $P \adj \ter{E}$ if and only if $!_\cat{E} \adj \ter{E}$ over $!_\cat{B} \adj \ter{B}$.
 %\end{proof}
 
-\begin{lemma}
-	A commutative square of the form
-	\begin{equation*}
-		\xymatrix@=1cm{
-			I \ar[d]_{f} \ar[r]^{\varphi_1}_{\text{cart}} & J \ar[d]^{g} \\
-			K \ar[r]_{\varphi_2}^{\text{cart}} & L
-		}
-	\end{equation*}
-	is always a pullback. 
+\begin{lemma}[\cite{TS}] For a fibration $\fib$ we have that
+	
+	\begin{enumerate}
+		\item A commutative square
+		\begin{equation*}
+			\xymatrix@=1cm{
+				I \ar[d]_{f} \ar[r]^{\varphi_1}_{\text{cart}} & J \ar[d]^{g} \\
+				K \ar[r]_{\varphi_2}^{\text{cart}} & L
+			}
+		\end{equation*}
+		in $\cat{E}$ with $\varphi_i$ cartesian and $f$ and $g$ vertical is always a pullback in $\cat{E}$
+		
+		\item A commutative square of cartesian morphisms in $\cat{E}$ over a pullback in $\cat{B}$ is a pullback in $\cat{E}$.
+	\end{enumerate}
+	 
 \end{lemma}
 
 \begin{defn}
@@ -254,7 +260,8 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 	A strict functor in $\Cat$ corresponds to a strict functor between double categories.
 \end{remark}
 
-We recall the notion of double limits \ie, limits in double categories introduced in \cite{LMP}. However, our limits will be analogous to limits of Grandis and Par\'{e}. 
+We recall the notion of double limits \ie, limits in double categories introduced in \cite{LMP}. We define tabulators, which will be crucial in the next section. In particular, tabulators of proarrow identities, which are related to cotensors in the case where our double category $\dcat{E}$ is reduced to a $2$-category, see \cite{RS} for more details. 
+
 
 \begin{defn}[\cite{SpanDPP}]
 	A double category $\dcat{E}$ has \emph{vertical pullbacks} if the diagram
@@ -272,6 +279,9 @@ A functor $\funct{G}{\dcat{E}}{\dcat{A}}$ between double categories with vertica
 	The universal property of v-pullbacks in double categories generalizes the universal property of 2-pullbacks. $\odot$ preserving pullbacks amounts to a  functorial choice of pullbacks, see \cite{LMP}.
 \end{remark}
 	
+\begin{defn}
+	
+\end{defn}
 
 
 \section{Double Fibrations}

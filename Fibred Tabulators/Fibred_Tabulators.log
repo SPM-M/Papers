@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.3.6)  13 NOV 2026 16:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.3.6)  15 NOV 2026 20:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1212,7 +1212,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{defn.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.180 	A
+l.186 	A
          double category $\dcat{D}$ is a pseudo category in $\Cat$, it consi...
 <xymatrix 3x1 184>
 
@@ -1221,42 +1221,42 @@ pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.197 	G
+l.203 	G
         iven a double category $\dcat{D}$, we  can form a \emph{horizontal b...
 Package hyperref Info: bookmark level for unknown notation defaults to 0 on inp
-ut line 202.
+ut line 208.
 
 pdfTeX warning (ext4): destination with the same identifier (name{example.4}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.208 	L
+l.214 	L
         et $\dcat{D}^2$ be the slice double category of $\dcat{D}$ over itse...
 
 pdfTeX warning (ext4): destination with the same identifier (name{example.5}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.213 	L
+l.219 	L
         et $\cat{C}$ be a category with pullbacks, we define a double catego...
 <xymatrix 2x1 54> <xymatrix 3x1 96> <xymatrix 3x2 264> <xymatrix 2x2 243>
 <xymatrix 2x2 225> <xymatrix 2x2 223>
 
 [3]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 253.
+ line 259.
  <xymatrix 3x1 184>
 pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.283 	A
+l.290 	A
          strict double functor $\dfib{P}{E}{B}$ between pseudo double catego...
 <xymatrix 5x3 507> (./Fibred_Tabulators.bbl
 
 [4])
 LaTeX Font Info:    Trying to load font information for T1+mlmtt on input line 
-307.
+314.
  (/usr/share/texlive/texmf-dist/tex/latex/mlmodern/t1mlmtt.fd
 File: t1mlmtt.fd 2021/01/11 v1.0 Font defs for mlmodern
 )
@@ -1270,10 +1270,10 @@ Package rerunfilecheck Info: File `Fibred_Tabulators.out' has not changed.
 (rerunfilecheck)             Checksum: E0B045B314EE50D790C5AFEFE2791B3D;837.
  ) 
 Here is how much of TeX's memory you used:
- 31927 strings out of 473197
- 601203 string characters out of 5718606
- 1131584 words of memory out of 5000000
- 54320 multiletter control sequences out of 15000+600000
+ 31932 strings out of 473197
+ 601251 string characters out of 5718606
+ 1132586 words of memory out of 5000000
+ 54322 multiletter control sequences out of 15000+600000
  640225 words of font info for 95 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  118i,14n,122p,3272b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1296,10 +1296,10 @@ ern/mlmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mlmodern/mlmtt
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on Fibred_Tabulators.pdf (5 pages, 310907 bytes).
+Output written on Fibred_Tabulators.pdf (5 pages, 312025 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
+ 264 PDF objects out of 1000 (max. 8388607)
+ 209 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
  69 words of extra memory for PDF output out of 10000 (max. 10000000)
 
