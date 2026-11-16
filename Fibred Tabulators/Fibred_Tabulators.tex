@@ -216,7 +216,7 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 
 
 \begin{example}
-	Let $\cat{C}$ be a category with pullbacks, we define a double category $\dcat{S}\textbf{pan}(\cat{C})$ whose vertical category is $\cat{C}$, whose proarrows $\pro{A}{B}$  are spans $\hspan{A}{C}{B}{f}{g}$ in $\cat{C}$, and whose cells are commuting squares:
+	Let $\cat{C}$ be a category with pullbacks, we define a double category $\dcat{S}\textbf{pan}(\cat{C})$ whose vertical category is $\cat{C}$, whose proarrows $\pro{A}{B}{}$  are spans $\hspan{A}{C}{B}{f}{g}$ in $\cat{C}$, and whose cells are commuting squares:
 	\begin{equation*}
 		\xymatrix{
 			A \ar[d] & C \ar[d] \ar[l] \ar[r] & B \ar[d] \\
@@ -280,8 +280,48 @@ A functor $\funct{G}{\dcat{E}}{\dcat{A}}$ between double categories with vertica
 \end{remark}
 	
 \begin{defn}
-	
+	The  $1$-\emph{tabulator} of a proarrow $\pro{A}{B}{M}$ consists of an object $TM$ together a cell
+	\begin{equation*}
+		\xymatrix{
+			TM \ar@{=}[r] \ar[d]_{\pi_A} \ar@{}[dr]|{\pi} & TM \ar[d]^{\pi_B} \\
+			A \ar[r]|-{\bullet}_{M} & B
+		}
+	\end{equation*}
+	such that for any other cell $\xi$ into $M$ there exists a vertical arrow $\funct{r}{R}{TM}$ with $ \xi = \frac{1_{r}}{\pi}$ as depicted below.
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix{
+					R \ar@{=}[r] \ar[d]_{\xi_A} \ar@{}[dr]|{\xi} & R \ar[d]^{\xi_B} \\
+					A \ar[r]|-{\bullet}_{M} & B
+		}}} \quad = 
+		\quad
+		\vcenter{\vbox{\xymatrix{
+					R \ar@{=}[r] \ar@{-->}[d]_{r} \ar@{}[dr]|{1_r} & R \ar@{-->}[d]^{r} \\
+					TM \ar@{=}[r] \ar[d]_{\pi_A} \ar@{}[dr]|{\pi} & TM \ar[d]^{\pi_B} \\
+					A \ar[r]|-{\bullet}_{M} & B
+		}}}
+	\end{equation*}
+	This is known as the 1-dimensional universal property of tabulators. 
 \end{defn}
+Although there is a 2-dimensional property of tabulators, it will play no role here. Hence, we shall refer to 1-tabulators as tabulators.
+
+\begin{example}
+	In $\dspan{C}$ the tabulator of a span $\hspan{A}{X}{B}{f}{g}$ is given by $X$ together with the cell
+	\begin{equation*}
+		\xymatrix{
+			X \ar[d]_{f} & X \ar[l]_{id_X} \ar[r]^{id_X} \ar[d]^{id_X} & X \ar[d]^{g} \\
+			A & X \ar[l]^{f} \ar[r]_{g} & B
+		}
+	\end{equation*}
+\end{example}
+
+\begin{example}
+	In $\mathbb{R}\text{el}(\text{Set})$, for a relation $\funct{\cat{R}}{A \times B}{\mathsf{2}}$
+\end{example}
+ We have the following result
+
+\begin{lemma}
+	A double category $\dcat{D}$ has tabulators 
+\end{lemma}
 
 
 \section{Double Fibrations}
