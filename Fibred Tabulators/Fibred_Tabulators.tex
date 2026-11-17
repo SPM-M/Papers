@@ -85,11 +85,11 @@ In this section we recall some basic facts about fibrations and their examples.
 
 Let $\cat{C}^2$ denote the slice category of $\cat{C}$ over itself
 \begin{example}[Fundamental Fibration]
-	Let $\cat{C}$ be a category with pullbacks. Then the functor $\mor{\text{cod}}{\cat{C}^2}{\cat{C}}$ is a fibration; a commutative square is a cartesian arrow in $\cat{C}^2$ precisely when it is a pullback.
+	Let $\cat{C}$ be a category with pullbacks. Then the functor $\mor{\partial_1}{\cat{C}^2}{\cat{C}}$ is a fibration; a commutative square is a cartesian arrow in $\cat{C}^2$ precisely when it is a pullback.
 \end{example}
 
 \begin{example}
-	The domain functor $\mor{\text{dom}}{\slice{\cat{C}}}{\cat{C}}$ is a fibration.
+	The domain functor $\mor{\partial_0}{\slice{\cat{C}}}{\cat{C}}$ is a fibration.
 \end{example}
 
 \begin{example}[Family fibration]
@@ -287,7 +287,7 @@ A functor $\funct{G}{\dcat{E}}{\dcat{A}}$ between double categories with vertica
 			A \ar[r]|-{\bullet}_{M} & B
 		}
 	\end{equation*}
-	such that for any other cell $\xi$ into $M$ there exists a vertical arrow $\funct{r}{R}{TM}$ with $ \xi = \frac{1_{r}}{\pi}$ as depicted below.
+	such that for any other cell $\xi$ into $M$ there exists a unique vertical arrow $\funct{r}{R}{TM}$ with $ \xi = \frac{1_{r}}{\pi}$ as depicted below.
 	\begin{equation*}
 		\vcenter{\vbox{\xymatrix{
 					R \ar@{=}[r] \ar[d]_{\xi_A} \ar@{}[dr]|{\xi} & R \ar[d]^{\xi_B} \\
@@ -302,7 +302,7 @@ A functor $\funct{G}{\dcat{E}}{\dcat{A}}$ between double categories with vertica
 	\end{equation*}
 	This is known as the 1-dimensional universal property of tabulators. 
 \end{defn}
-Although there is a 2-dimensional property of tabulators, it will play no role here. Hence, we shall refer to 1-tabulators as tabulators.
+
 
 \begin{example}
 	In $\dspan{C}$ the tabulator of a span $\hspan{A}{X}{B}{f}{g}$ is given by $X$ together with the cell
@@ -315,14 +315,24 @@ Although there is a 2-dimensional property of tabulators, it will play no role h
 \end{example}
 
 \begin{example}
-	In $\mathbb{R}\text{el}(\text{Set})$, for a relation $\funct{\cat{R}}{A \times B}{\mathsf{2}}$
+	In $\mathbb{R}\text{el}(\text{Set})$, for a relation $\funct{\cat{R}}{A \times B}{\mathsf{2}}$, the tabulator of $\cat{R}$ is computed by pullback
+	\begin{equation*}
+		\xymatrix{
+			T\cat{R} \ar[r] \ar@{}[d]^(0.2){}="start" \ar@{>->} "start";[d]  \pullbackcorner & \mathsf{1}  \ar[d]^{\top} \\
+			A \times B \ar[r]_{\cat{R}} & \mathsf{2}
+		}
+	\end{equation*}
+	where $\mathsf{2} = \{\bot \to \top\}$.
 \end{example}
- We have the following result
+Although there is a 2-dimensional property of tabulators, it will play no role here. Hence, we shall refer to 1-tabulators as tabulators. We have the following result 
 
-\begin{lemma}
-	A double category $\dcat{D}$ has tabulators 
+\begin{lemma}[\cite{LMP}]
+	A double category $\dcat{D}$ has tabulators if and only if  the functor $\funct{i}{\cat{D}_0}{\cat{D}_1}$ has a right adjoint.
 \end{lemma}
 
+\begin{thm}
+	The double category $\dcat{D}$ has all small (resp. finite) double limits if and only if it has small (resp. finite) double products, double equalizers and tabulators.
+\end{thm}
 
 \section{Double Fibrations}
 \begin{lemma}[\cite{Crutt}]
@@ -345,6 +355,21 @@ Although there is a 2-dimensional property of tabulators, it will play no role h
 \begin{remark}
 	A  double fibration $\dfib{P}{E}{B}$ is a pseudo category internal to $\mathbf{Fib}$ such that the source and target maps preserve chosen cleavages. A cleavage for $P$ is chosen componentwise. Since $s_{\cat{E}}$ and $t_{\cat{B}}$ preserve cleavages, they are morphisms in $\mathbf{cFib}$.
 \end{remark}
+
+\begin{example}(Domain double fibration)
+	Let $\dcat{D}$ be a double category. The functor $\funct{\textbf{dom}}{\dcat{D}^2}{\dcat{D}}$ sending an arrow to its domain and a cell to its internal domain is a double fibration. 
+\end{example}
+
+\begin{example}(Codomain double fibration)
+	Let $\dcat{D}$ be a pseudo category in the 2-category of finitely-complete categories, limit-preserving functors and natural transformations. Suppose the source and target strictly preserve limits, and the identity and  composition preserve limits up to isomorphism. Then $\funct{\textbf{cod}}{\dcat{D}^2}{\dcat{D}}$ is a double fibration. Cartesian morphisms of $\dcat{D}_1$ are given by pullbacks of cells.
+\end{example}
+
+\begin{example}[\cite{ElenaMesitiPronk}]
+	The image double functor $\funct{\text{Im}}{\cspan}{\mathbb{R}\text{el}}$ with $\funct{\text{Im}}{Set}{Set}$ and $\funct{\text{Im}}{\cspan_1}{\mathbb{R}\text{el}_1}$
+\end{example}
+
+
+\subsection{Fibred double limits}
 
 
 

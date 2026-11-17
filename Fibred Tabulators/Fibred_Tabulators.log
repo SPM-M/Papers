@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.3.6)  16 NOV 2026 16:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.3.6)  17 NOV 2026 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1183,13 +1183,6 @@ ine 69.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on inpu
 t line 87.
 
-Overfull \hbox (1.44867pt too wide) in paragraph at lines 88--89
-[][]\T1/mlmr/bx/n/9 Example 1.3 \T1/mlmr/m/n/9 (Fun-da-men-tal Fi-bra-tion)\T1/
-mlmr/bx/n/9 . []\T1/mlmr/m/n/9 Let $\OMS/mlmsy/m/n/9 C$ \T1/mlmr/m/n/9 be a cat
--e-gory with pull-backs. Then the func-tor $[] [] [] \OMS/mlmsy/m/n/9 C[] ! 
- []
-
-
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
@@ -1253,35 +1246,57 @@ LaTeX Font Info:    Trying to load font information for OT1+mlmss on input line
  318.
  (/usr/share/texlive/texmf-dist/tex/latex/mlmodern/ot1mlmss.fd
 File: ot1mlmss.fd 2021/01/11 v1.0 Font defs for mlmodern
-)
+) <xymatrix
+2x2 217>
 pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.333 	A
+l.343 	A
          strict double functor $\dfib{P}{E}{B}$ between pseudo double catego...
-<xymatrix 5x3 507> (./Fibred_Tabulators.bbl)
+<xymatrix 5x3 507>
+pdfTeX warning (ext4): destination with the same identifier (name{example.4}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.359 \begin{example}(
+                      Domain double fibration)
+pdfTeX warning (ext4): destination with the same identifier (name{example.5}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.363 \begin{example}(
+                      Codomain double fibration)
+pdfTeX warning (ext4): destination with the same identifier (name{example.6}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.368 	T
+        he image double functor $\funct{\text{Im}}{\cspan}{\mathbb{R}\text{e...
+
+
+[5] (./Fibred_Tabulators.bbl)
 LaTeX Font Info:    Trying to load font information for T1+mlmtt on input line 
-357.
+382.
 
 (/usr/share/texlive/texmf-dist/tex/latex/mlmodern/t1mlmtt.fd
 File: t1mlmtt.fd 2021/01/11 v1.0 Font defs for mlmodern
 )
 
-[5] (./Fibred_Tabulators.aux)
+[6] (./Fibred_Tabulators.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Fibred_Tabulators.out' has not changed.
-(rerunfilecheck)             Checksum: E0B045B314EE50D790C5AFEFE2791B3D;837.
+(rerunfilecheck)             Checksum: 0DB0D363D1B3808C8A97C300F14B91E7;1000.
  ) 
 Here is how much of TeX's memory you used:
- 31976 strings out of 473197
- 602156 string characters out of 5718606
- 1136594 words of memory out of 5000000
- 54353 multiletter control sequences out of 15000+600000
- 648392 words of font info for 98 fonts, out of 8000000 for 9000
+ 31995 strings out of 473197
+ 602455 string characters out of 5718606
+ 1135702 words of memory out of 5000000
+ 54363 multiletter control sequences out of 15000+600000
+ 654054 words of font info for 100 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  118i,14n,122p,3272b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/mlmodern/mlmbx10.pfb></usr/
@@ -1304,10 +1319,10 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on Fibred_Tabulators.pdf (5 pages, 328756 bytes).
+Output written on Fibred_Tabulators.pdf (6 pages, 334168 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
- 77 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 297 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 77 words of extra memory for PDF output out of 10000 (max. 10000000)
 
