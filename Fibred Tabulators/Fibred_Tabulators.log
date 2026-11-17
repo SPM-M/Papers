@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.3.6)  17 NOV 2026 13:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.3.6)  18 NOV 2026 00:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1205,7 +1205,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{defn.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.186 	A
+l.189 	A
          double category $\dcat{D}$ is a pseudo category in $\Cat$, it consi...
 <xymatrix 3x1 184>
 
@@ -1214,36 +1214,36 @@ pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.203 	G
+l.206 	G
         iven a double category $\dcat{D}$, we  can form a \emph{horizontal b...
 Package hyperref Info: bookmark level for unknown notation defaults to 0 on inp
-ut line 208.
+ut line 211.
 
 pdfTeX warning (ext4): destination with the same identifier (name{example.4}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.214 	L
+l.217 	L
         et $\dcat{D}^2$ be the slice double category of $\dcat{D}$ over itse...
 
 pdfTeX warning (ext4): destination with the same identifier (name{example.5}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.219 	L
+l.222 	L
         et $\cat{C}$ be a category with pullbacks, we define a double catego...
 <xymatrix 2x1 61> <xymatrix 3x1 96> <xymatrix 3x2 264> <xymatrix 2x2 243>
 <xymatrix 2x2 225> <xymatrix 2x2 223>
 
 [3]
 Package hyperref Info: bookmark level for unknown remark defaults to 0 on input
- line 259.
+ line 262.
  <xymatrix 3x1 184> <xymatrix 2x1 61> <xymatrix 2x2 226> <xymatrix 2x2 226>
 <xymatrix 2x3 391> <xymatrix 3x1 96> <xymatrix 3x2 313>
 
 [4]
 LaTeX Font Info:    Trying to load font information for OT1+mlmss on input line
- 318.
+ 321.
  (/usr/share/texlive/texmf-dist/tex/latex/mlmodern/ot1mlmss.fd
 File: ot1mlmss.fd 2021/01/11 v1.0 Font defs for mlmodern
 ) <xymatrix
@@ -1252,32 +1252,32 @@ pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.343 	A
+l.346 	A
          strict double functor $\dfib{P}{E}{B}$ between pseudo double catego...
 <xymatrix 5x3 507>
 pdfTeX warning (ext4): destination with the same identifier (name{example.4}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.359 \begin{example}(
+l.362 \begin{example}(
                       Domain double fibration)
 pdfTeX warning (ext4): destination with the same identifier (name{example.5}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.363 \begin{example}(
+l.366 \begin{example}(
                       Codomain double fibration)
 pdfTeX warning (ext4): destination with the same identifier (name{example.6}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.368 	T
+l.371 	T
         he image double functor $\funct{\text{Im}}{\cspan}{\mathbb{R}\text{e...
+<xymatrix 3x1 96>
 
-
-[5] (./Fibred_Tabulators.bbl)
+[5] <xymatrix 3x2 313> <xymatrix 3x2 266> (./Fibred_Tabulators.bbl)
 LaTeX Font Info:    Trying to load font information for T1+mlmtt on input line 
-382.
+399.
 
 (/usr/share/texlive/texmf-dist/tex/latex/mlmodern/t1mlmtt.fd
 File: t1mlmtt.fd 2021/01/11 v1.0 Font defs for mlmodern
@@ -1292,13 +1292,13 @@ Package rerunfilecheck Info: File `Fibred_Tabulators.out' has not changed.
 (rerunfilecheck)             Checksum: 0DB0D363D1B3808C8A97C300F14B91E7;1000.
  ) 
 Here is how much of TeX's memory you used:
- 31995 strings out of 473197
- 602455 string characters out of 5718606
- 1135702 words of memory out of 5000000
+ 31997 strings out of 473197
+ 602485 string characters out of 5718606
+ 1135700 words of memory out of 5000000
  54363 multiletter control sequences out of 15000+600000
  654054 words of font info for 100 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 118i,14n,122p,3272b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 118i,15n,122p,3272b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/mlmodern/mlmbx10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/mlmodern/mlmbx6.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/mlmodern/mlmbx9.pfb></usr/share/texlive/texm
@@ -1318,11 +1318,12 @@ ern/mlmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mlmodern/mlmsy
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on Fibred_Tabulators.pdf (6 pages, 334168 bytes).
+live/texmf-dist/fonts/type1/public/xypic/xybsql10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/xypic/xybtip10.pfb>
+Output written on Fibred_Tabulators.pdf (6 pages, 339473 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 239 compressed objects within 3 object streams
- 85 named destinations out of 1000 (max. 500000)
+ 304 PDF objects out of 1000 (max. 8388607)
+ 244 compressed objects within 3 object streams
+ 87 named destinations out of 1000 (max. 500000)
  77 words of extra memory for PDF output out of 10000 (max. 10000000)
 
