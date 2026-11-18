@@ -266,7 +266,7 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 We recall the notion of double limits \ie, limits in double categories introduced in \cite{LMP}. We define tabulators, which will be crucial in the next section. In particular, tabulators of proarrow identities, which are related to cotensors in the case where our double category $\dcat{E}$ is reduced to a $2$-category, see \cite{RS} for more details. 
 
 
-\begin{defn}[\cite{SpanDPP}]
+\begin{defn}[\cite{SpanDPP}] \label{vp.bs}
 	A double category $\dcat{E}$ has \emph{vertical pullbacks} if the diagram
 	\begin{equation*}
 		\xymatrix{
@@ -387,12 +387,34 @@ Although there is a 2-dimensional property of tabulators, it will play no role h
 
 
 \subsection{Fibred double limits}
+For the rest of this section, we fix $\dcat{B}$ a pseudo category internal in $\mathbf{PBCat}$ as in Definition \ref{vp.bs}.
+
+\begin{defn}
+	A double fibration $\dfib{P}{E}{B}$ has fibred terminal objects if every fibre of $\cat{P}_0$ and $\cat{P}_1$ has a terminal object and these are preserved by cartesianness respectively. 
+\end{defn}
+
+$\cat{P}_0$ is ordinary fibration with fibred terminals. Let $M \in \dcat{D}_1$ be an object, the fibre $\cat{P}_1(M)$ consists of proarrows $A$ such that $\cat{P}_1{N} = M$ and cells 
+\begin{equation*}
+	\xymatrix{
+		{} \ar[r]|-{\bullet^{A}} \ar@{}[dr]|{\alpha} & {} \ar[d] \\
+		{} \ar[r]|-{\bullet_{B}} & {}
+	}
+\end{equation*}
+
+over the globular cell
+
+\begin{equation*}
+	\xymatrix{
+		{} \ar[r]|-{\bullet}^M \ar@{}[dr]|{\ipro{M}} & {} \ar[d] \\
+		{} \ar[r]|-{\bullet}_M & {}
+	}
+\end{equation*}
+We shall refer to such cells as \emph{vertical cells}. $\compdfib{P}{E}{B}{1}$ has fibred terminals in the sense that a terminal in the fibre of $M$ is an object $\pro{T}{T}{U_T}$ such that for any other object $X$ \cite{Crutt}
 
 
 
 
-
-\bibliographystyle{ieeetr}
+\bibliographystyle{unsrt}
 \bibliography{reference}
 
 
