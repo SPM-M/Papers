@@ -1,7 +1,6 @@
 \documentclass[9pt, leqno]{amsart}
 \usepackage[center]{titlesec}
 \usepackage{lipsum}
-
 \input{preamble}
 %\usepackage[document]{ragged2e}
 
@@ -189,7 +188,7 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 	A double category $\dcat{D}$ is a pseudo category in $\Cat$, it consists of the following diagram 
 	\begin{equation*}
 		\xymatrix{
-			\dcat{D}_2 \ar[r]^(.6){\odot} & \dcat{D}_1 \ar@<1ex>[r]^{s} \ar@<-1ex>[r]_{t} & \dcat{D}_0 \ar[l]|-{i}
+			\dcat{D}_2 \ar[r]^(.5){\odot} & \dcat{D}_1 \ar@<1ex>[r]^{s} \ar@<-1ex>[r]_{t} & \dcat{D}_0 \ar[l]|-{i}
 		}
 	\end{equation*}
 	We call $\dcat{D}_0$ the category of objects and vertical arrows and $\dcat{D}_1$ the category of proarrows and cells:
@@ -387,17 +386,17 @@ Although there is a 2-dimensional property of tabulators, it will play no role h
 
 
 \subsection{Fibred double limits}
-For the rest of this section, we fix $\dcat{B}$ a pseudo category internal in $\mathbf{PBCat}$ as in Definition \ref{vp.bs}.
+For the rest of this section, we fix $\dcat{B}$ a pseudo category internal in $\mathbf{PBCat}$ as in Definition \ref{vp.bs}. 
 
 \begin{defn}
 	A double fibration $\dfib{P}{E}{B}$ has fibred terminal objects if every fibre of $\cat{P}_0$ and $\cat{P}_1$ has a terminal object and these are preserved by cartesianness respectively. 
 \end{defn}
 
-$\cat{P}_0$ is ordinary fibration with fibred terminals. Let $M \in \dcat{D}_1$ be an object, the fibre $\cat{P}_1(M)$ consists of proarrows $A$ such that $\cat{P}_1{N} = M$ and cells 
+$\cat{P}_0$ is ordinary fibration with fibred terminals. Let $M \in \dcat{D}_1$ be an object, the fibre $\cat{P}_1(M)$ over $M$ consists of proarrows $A$ such that $\cat{P}_1{A} = M$ and cells 
 \begin{equation*}
 	\xymatrix{
-		{} \ar[r]|-{\bullet^{A}} \ar@{}[dr]|{\alpha} & {} \ar[d] \\
-		{} \ar[r]|-{\bullet_{B}} & {}
+		{} \ar[r]|-{\bullet}^{A} \ar[d]_{f} \ar@{}[dr]|{\alpha} & {} \ar[d]^{g} \\
+		{} \ar[r]|-{\bullet}_{B} & {}
 	}
 \end{equation*}
 
@@ -405,16 +404,103 @@ over the globular cell
 
 \begin{equation*}
 	\xymatrix{
-		{} \ar[r]|-{\bullet}^M \ar@{}[dr]|{\ipro{M}} & {} \ar[d] \\
+		{} \ar[r]|-{\bullet}^M \ar@{=}[d] \ar@{}[dr]|{\ipro{M}} & {} \ar@{=}[d] \\
 		{} \ar[r]|-{\bullet}_M & {}
 	}
 \end{equation*}
-We shall refer to such cells as \emph{vertical cells}. $\compdfib{P}{E}{B}{1}$ has fibred terminals in the sense that a terminal in the fibre of $M$ is an object $\pro{T}{T}{U_T}$ such that for any other object $X$ \cite{Crutt}
+We shall refer to such cells as \emph{vertical cells}. $\compdfib{P}{E}{B}{1}$ has fibred terminals in the sense that for every $M \in \dcat{B}_1$ there is an object ${U_T} \in \cat{P}_1(M)$ such that for every cell $\funct{\psi}{N}{M}$ and an object $X \in \cat{P}_1(N)$ there is a unique cell
+\begin{equation*}
+	\xymatrix{
+		A \ar[r]|-{\bullet}^{X} \ar[d]_{l} \ar@{}[dr]|{\tau} & B \ar[d]^{k} \\
+		T \ar[r]|-{\bullet}_{U_T} & T
+	}
+\end{equation*}
+over $\psi$.
 
+\begin{lemma}
+	Let $\dcat{B}$ have terminal objects. A double fibration $\dfib{P}{E}{B}$ has fibred terminals if and only if $\dcat{E}$ has terminals and $P_0$ and $P_1$ preserve terminal objects.
+\end{lemma}
 
+%In a double fibration $\dfib{P}{E}{B}$ the functor $\funct{i}{\cat{E}}{\cat{E}_1}$
+\begin{prop}
+	Let $\dfib{P}{E}{B}$ be a double fibration. A commuting cube 
+	\begin{equation*}
+		\xymatrix{
+			&K \ar@{=}[rr] \ar[dd]^(.3){v}|\hole \ar[dl]_{q} && K \ar[dd]^{v} \ar[dl]^{q} \\
+			L \ar@{=}[rr] \ar[dd]_{p} && L \ar[dd]^(.3){p} \\
+			& I \ar@{=}[rr]|\hole \ar[dl]_{u}  && I \ar[dl]^{u}  \\
+			J \ar@{=}[rr] && J
+		}
+	\end{equation*}
+	where the top and bottom squares are cartesian and the front and back squares are vertical is always a vertical pullback in $\dcat{E}_1$.
+\end{prop}
 
+\begin{proof}
+	The top and bottom faces are cartesian since the functor $\funct{i}{\cat{E}_0}{\cat{E}_1}$ preserves cartesian morphisms. Consider the a cone over the front and back faces \ie, for an object $1^{\bullet}_X$ we have cells
+	\begin{equation*}
+			\vcenter{\vbox{\xymatrix{
+						X \ar[d]_{x_I} \ar@{=}[r] \ar@{}[dr]|{\gamma_I} & X \ar[d]^{x_I} \\					
+						I \ar@{=}[r] & I
+			}}} \qquad
+			\vcenter{\vbox{\xymatrix{
+						X \ar[d]_{x_L} \ar@{=}[r] \ar@{}[dr]|{\gamma_L} & X \ar[d]^{x_L} \\					
+						L \ar@{=}[r] & L
+			}}}
+		\end{equation*}
+		such that
+		\begin{equation*}
+			\vcenter{\vbox{\xymatrix{
+						X \ar[d]_{x_I} \ar@{=}[r] \ar@{}[dr]|{\gamma_I} & X \ar[d]^{x_I}	 \\
+						I \ar[d]_{u} \ar@{=}[r] \ar@{}[dr]|{1_u} & I \ar[d]^{u} \\
+						J \ar@{=}[r] & J
+			}}} \quad
+			=
+			\quad
+			\vcenter{\vbox{\xymatrix{
+						X \ar[d]_{x_L} \ar@{=}[r] \ar@{}[dr]|{\gamma_L} & X \ar[d]^{x_L}	 \\
+						L \ar[d]_{p} \ar@{=}[r] \ar@{}[dr]|{1_p} & L \ar[d]^{p} \\
+						J \ar@{=}[r] & J
+			}}}
+	\end{equation*}
+	
+	and a cell 
+	
+	\begin{equation*}
+		\xymatrix{
+			A \ar[r]|-{\bullet}^{N} \ar[d]_{l} \ar@{}[dr]|{\psi} & B \ar[d]^{k} \\
+			C \ar[r]|-{\bullet}_{M} & D
+		}
+	\end{equation*}
+	in $\cat{B}_1$. Since the bottom square is cartesian there is a unique cell 
+	
+	\begin{equation*}
+		\xymatrix@=1cm{
+			X \ar@{-->}[d]_{x_I} \ar@{=}[r] \ar@{}[dr]|{\tilde{\gamma}_I} & X \ar@{-->}[d]^{x_I} \\
+			I \ar@{=}[r] & I
+		}
+	\end{equation*}
+	Since the top and bottom squares lie over $\psi$, there is another unique cell $\tilde{\gamma}_K$ since the top square is cartesian. But $\tilde{\gamma}_I$ is given by the composition
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix@=1cm{
+					X \ar[d]_{x_K} \ar@{=}[r] \ar@{}[dr]|{\tilde{\gamma}_K} & X \ar[d]^{x_K} \\
+					K \ar[d]_{v} \ar@{=}[r] \ar@{}[dr]|{1_v} & K \ar[d]^{v} \\
+					I \ar@{=}[r] & I 
+		}}} \qquad
+		= 
+		\qquad
+		\vcenter{\vbox{\xymatrix{
+				X \ar[d]_{x_I} \ar@{=}[r] \ar@{}[dr]|{\tilde{\gamma}_I} & X \ar[d]^{x_I} \\
+				I \ar@{=}[r] & I	
+		}}}
+	\end{equation*}
+	Therefore $\tilde{\gamma}_K$ is the  unique cone morphism.
+	
+\end{proof}
 
-\bibliographystyle{unsrt}
+\begin{thm}
+	If $\dfib{P}{E}{B}$ is a double fibration with  fibred pullbacks, then every pullback in some fibre is  a pullback in $\dcat{E}$.
+\end{thm}
+\bibliographystyle{siam}
 \bibliography{reference}
 
 

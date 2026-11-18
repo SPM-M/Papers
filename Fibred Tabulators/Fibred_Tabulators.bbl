@@ -1,47 +1,37 @@
-\newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{ACK{\etalchar{+}}25}
+\begin{thebibliography}{1}
 
-\bibitem[ACK{\etalchar{+}}25]{ElenaMesitiPronk}
-C.~B. Aberl{\'e}, Elena Caviglia, Matthew Kukla, Rub{\'e}n Maldonado, Luca
-  Mesiti, Dorette Pronk, and Tanjona Ralaivaosaona.
-\newblock Double {Orthogonal} {Factorization} {Systems}.
+\bibitem{ElenaMesitiPronk}
+{\sc C.~B. Aberl{\'e}, E.~Caviglia, M.~Kukla, R.~Maldonado, L.~Mesiti,
+  D.~Pronk, and T.~Ralaivaosaona}, {\em Double {Orthogonal} {Factorization}
+  {Systems}}.
 \newblock Preprint, {arXiv}:2509.26343 [math.{CT}] (2025), 2025.
 
-\bibitem[CLPS22]{Crutt}
-G.~S.~H. Cruttwell, M.~J. Lambert, D.~A. Pronk, and M.~Szyld.
-\newblock Double fibrations.
-\newblock {\em Theory Appl. Categ.}, 38:Paper No. 35, 1326--1394, 2022.
+\bibitem{Crutt}
+{\sc G.~S.~H. Cruttwell, M.~J. Lambert, D.~A. Pronk, and M.~Szyld}, {\em Double
+  fibrations}, Theory Appl. Categ., 38 (2022), pp.~Paper No. 35, 1326--1394.
 
-\bibitem[DPP10]{SpanDPP}
-Robert Dawson, Robert Par\'e, and Dorette Pronk.
-\newblock The span construction.
-\newblock {\em Theory Appl. Categ.}, 24:No. 13, 302--377, 2010.
+\bibitem{SpanDPP}
+{\sc R.~Dawson, R.~Par\'e, and D.~Pronk}, {\em The span construction}, Theory
+  Appl. Categ., 24 (2010), pp.~No. 13, 302--377.
 
-\bibitem[GP99]{LMP}
-Marco Grandis and Robert Par{\'e}.
-\newblock Limits in double categories.
-\newblock {\em Cah. Topologie G{\'e}om. Diff{\'e}r. Cat{\'e}goriques},
-  40(3):162--220, 1999.
+\bibitem{LMP}
+{\sc M.~Grandis and R.~Par{\'e}}, {\em Limits in double categories}, Cah.
+  Topologie G{\'e}om. Diff{\'e}r. Cat{\'e}goriques, 40 (1999), pp.~162--220.
 
-\bibitem[Jac99]{JacobsCLTT}
-B.~Jacobs.
-\newblock {\em Categorical Logic and Type Theory}, volume 141 of {\em Studies
-  in Logic and the Foundations of Mathematics}.
-\newblock North Holland, 1999.
+\bibitem{JacobsCLTT}
+{\sc B.~Jacobs}, {\em Categorical Logic and Type Theory}, vol.~141 of Studies
+  in Logic and the Foundations of Mathematics, North Holland, 1999.
 
-\bibitem[MF06]{NMF}
-N.~Martins-Ferreira.
-\newblock Pseudo-categories.
-\newblock {\em J. Homotopy Relat. Struct.}, 1(1):47--78, 2006.
+\bibitem{NMF}
+{\sc N.~Martins-Ferreira}, {\em Pseudo-categories}, J. Homotopy Relat. Struct.,
+  1 (2006), pp.~47--78.
 
-\bibitem[Str76]{RS}
-Ross Street.
-\newblock Limits indexed by category-valued 2-functors.
-\newblock {\em J. Pure Appl. Algebra}, 8:149--181, 1976.
+\bibitem{RS}
+{\sc R.~Street}, {\em Limits indexed by category-valued 2-functors}, J. Pure
+  Appl. Algebra, 8 (1976), pp.~149--181.
 
-\bibitem[Str18]{TS}
-Thomas Streicher.
-\newblock Fibered {Categories} a la {Jean} {Benabou}.
+\bibitem{TS}
+{\sc T.~Streicher}, {\em Fibered {Categories} a la {Jean} {Benabou}}.
 \newblock Preprint, {arXiv}:1801.02927 [math.{CT}] (2018), 2018.
 
 \end{thebibliography}
