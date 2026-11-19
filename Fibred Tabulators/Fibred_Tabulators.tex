@@ -493,13 +493,54 @@ over $\psi$.
 				I \ar@{=}[r] & I	
 		}}}
 	\end{equation*}
-	Therefore $\tilde{\gamma}_K$ is the  unique cone morphism.
+	Thus $\tilde{\gamma}_K$ is the unique cone morphism.
 	
 \end{proof}
 
 \begin{thm}
 	If $\dfib{P}{E}{B}$ is a double fibration with  fibred pullbacks, then every pullback in some fibre is  a pullback in $\dcat{E}$.
 \end{thm}
+\begin{proof}
+	Clearly, this is true for $\cat{P}_0$. To show this for $\cat{P}_1$ let 
+	\begin{equation*}\label{p.bcube} \tag{$\clubsuit$}
+		\xymatrix{
+			&L \ar[rr]|{\bullet}^{\mathbi{a}} \ar[dd]_(.7){v}|\hole \ar[dl]_{q} && L^\prime \ar[dd]^{v^\prime} \ar[dl]^{q^\prime} \\
+			K \ar[rr]|(.6){\bullet}^(.6){\mathbi{b}} \ar[dd]_{p} && K^\prime \ar[dd]^(.3){p^\prime} \\
+			& I \ar[rr]|(.3){\bullet}_(.3){\mathbi{c}}|\hole \ar[dl]_{u}  && I^\prime \ar[dl]^{u^\prime}  \\
+			J \ar[rr]|{\bullet}_{\mathbi{d}} && J^\prime
+		}
+	\end{equation*}
+	be a pullback in $\cat{E}_1$ over $\pro{A}{B}{M} \in \cat{B}_1$ and 
+	\begin{equation*}
+		\xymatrix{
+				A \ar[r]|-{\bullet}^{N} \ar[d]_{f} \ar@{}[dr]|{\psi} & B \ar[d]^{g} \\
+				C \ar[r]|-{\bullet}_{M} & D
+		}
+	\end{equation*}
+	be a cell in $\cat{B}_1$. Consider the following diagram
+	\begin{equation*}
+		\xymatrix@=1cm{
+			C \ar@/_2.5pc/[ddd]_{c_K} \ar[d]_{c_I} \ar@{=}[r] \ar@{}[dr]|{\alpha} & C \ar[d]^{c_{I^\prime}} \ar@/^2.5pc/[ddd]^{c_K} \\
+			I \ar[d]_{u} \ar[r]|{\bullet}^{\mathbi{c}} \ar@{}[dr]|{\eta} & I^\prime \ar[d]^{u^\prime} \\
+			J \ar[r]|{\bullet}^{\mathbi{d}} \ar@{}[dr]|{\gamma} & J^\prime \\
+			K \ar[u]^{p} \ar[r]|{\bullet}_{\mathbi{b}} & K^\prime \ar[u]_{p^\prime}
+		}
+	\end{equation*}
+	with $p \comp c_K = u \comp c_I$ and $p^\prime \comp c_{K^\prime} = u^\prime \comp c_{I^\prime}$ for an object $1^{\bullet}_C \in \cat{E}_1$ \ie, a double cone over $\eta$ and $\gamma$. The cells
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix{
+					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\chi} & C \ar[d]^{c_K} \\
+					K \ar[r]|{\bullet}_{\mathbi{b}} & K^\prime
+		}}}
+		\qquad
+		\vcenter{\vbox{\xymatrix{
+					C \ar[d]_{c_I} \ar@{=}[r] \ar@{}[dr]|{\alpha} & C \ar[d]^{c_I} \\
+					I \ar[r]|{\bullet}_{\mathbi{c}} & I^\prime
+		}}}
+	\end{equation*}
+	lie over the same cell $\psi$.
+	
+\end{proof}
 \bibliographystyle{siam}
 \bibliography{reference}
 
