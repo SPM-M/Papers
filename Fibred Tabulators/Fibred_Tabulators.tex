@@ -408,11 +408,11 @@ over the globular cell
 		{} \ar[r]|-{\bullet}_M & {}
 	}
 \end{equation*}
-We shall refer to such cells as \emph{vertical cells}. $\compdfib{P}{E}{B}{1}$ has fibred terminals in the sense that for every $M \in \dcat{B}_1$ there is an object ${U_T} \in \cat{P}_1(M)$ such that for every cell $\funct{\psi}{N}{M}$ and an object $X \in \cat{P}_1(N)$ there is a unique cell
+We shall refer to such cells as \emph{vertical cells}. $\compdfib{P}{E}{B}{1}$ has fibred terminals in the sense that for every $M \in \dcat{B}_1$ there is an object $1^{\bullet}_T \in \cat{P}_1(M)$ such that for every cell $\funct{\psi}{N}{M}$ and an object $X \in \cat{P}_1(N)$ there is a unique cell
 \begin{equation*}
 	\xymatrix{
 		A \ar[r]|-{\bullet}^{X} \ar[d]_{l} \ar@{}[dr]|{\tau} & B \ar[d]^{k} \\
-		T \ar[r]|-{\bullet}_{U_T} & T
+		T \ar[r]|-{\bullet}_{1^{\bullet}_T} & T
 	}
 \end{equation*}
 over $\psi$.
@@ -422,7 +422,7 @@ over $\psi$.
 \end{lemma}
 
 %In a double fibration $\dfib{P}{E}{B}$ the functor $\funct{i}{\cat{E}}{\cat{E}_1}$
-\begin{prop}
+\begin{prop}\label{vc}
 	Let $\dfib{P}{E}{B}$ be a double fibration. A commuting cube 
 	\begin{equation*}
 		\xymatrix{
@@ -520,7 +520,7 @@ over $\psi$.
 	be a cell in $\cat{B}_1$. Consider the following diagram
 	\begin{equation*}
 		\xymatrix@=1cm{
-			C \ar@/_2.5pc/[ddd]_{c_K} \ar[d]_{c_I} \ar@{=}[r] \ar@{}[dr]|{\alpha} & C \ar[d]^{c_{I^\prime}} \ar@/^2.5pc/[ddd]^{c_K} \\
+			C \ar@/_2.5pc/[ddd]_{c_K} \ar[d]_{c_I} \ar@{=}[r] \ar@{}[dr]|{\alpha} & C \ar[d]^{c_{I^\prime}} \ar@/^2.5pc/[ddd]^{c_{K^\prime}} \\
 			I \ar[d]_{u} \ar[r]|{\bullet}^{\mathbi{c}} \ar@{}[dr]|{\eta} & I^\prime \ar[d]^{u^\prime} \\
 			J \ar[r]|{\bullet}^{\mathbi{d}} \ar@{}[dr]|{\gamma} & J^\prime \\
 			K \ar[u]^{p} \ar[r]|{\bullet}_{\mathbi{b}} & K^\prime \ar[u]_{p^\prime}
@@ -529,18 +529,258 @@ over $\psi$.
 	with $p \comp c_K = u \comp c_I$ and $p^\prime \comp c_{K^\prime} = u^\prime \comp c_{I^\prime}$ for an object $1^{\bullet}_C \in \cat{E}_1$ \ie, a double cone over $\eta$ and $\gamma$. The cells
 	\begin{equation*}
 		\vcenter{\vbox{\xymatrix{
-					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\chi} & C \ar[d]^{c_K} \\
+					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\chi} & C \ar[d]^{c_{K^\prime}} \\
 					K \ar[r]|{\bullet}_{\mathbi{b}} & K^\prime
 		}}}
 		\qquad
 		\vcenter{\vbox{\xymatrix{
-					C \ar[d]_{c_I} \ar@{=}[r] \ar@{}[dr]|{\alpha} & C \ar[d]^{c_I} \\
+					C \ar[d]_{c_I} \ar@{=}[r] \ar@{}[dr]|{\alpha} & C \ar[d]^{c_{I^\prime}} \\
 					I \ar[r]|{\bullet}_{\mathbi{c}} & I^\prime
 		}}}
 	\end{equation*}
-	lie over the same cell $\psi$.
-	
+	lie over the same cell $\psi$. Futhermore, let 
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix{
+					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\chi} & C \ar[d]^{c_{K^\prime}} \\
+					f^*K \ar[r]|{\bullet}^{\mathbi{b}^*} \ar[d]_{\cleav{f}{K}} \ar@{}[dr]|{\text{cart}} & g^*K^\prime \ar[d]^{\cleav{g}{K^\prime}} \\
+					K \ar[r]|{\bullet}_{\mathbi{b}} & K^\prime
+		}}}
+		\qquad
+		\vcenter{\vbox{\xymatrix{
+					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\chi} & C \ar[d]^{c_{K^\prime}} \\
+					f^*I \ar[r]|{\bullet}^{\mathbi{c}^*} \ar[d]_{\cleav{f}{I}} \ar@{}[dr]|{\text{cart}} & g^*I^\prime \ar[d]^{\cleav{g}{I^\prime}} \\
+					I \ar[r]|{\bullet}_{\mathbi{c}} & I^\prime
+		}}}
+	\end{equation*}
+	be the vertical-cartesian factorizations of $\chi$ and $\alpha$ respectively. The image of $\clubsuit$ under change of base is also a pullback, there is a vertical cell 
+	\begin{equation*}
+		\xymatrix{
+			C \ar[d]_{\bar{c}} \ar@{=}[r] \ar@{}[dr]|{\mu} & C \ar[d]^{\bar{c'}} \\
+			f^*L \ar[r]|{\bullet}_{\mathbi{a}^*} & g^*L^\prime
+		}
+	\end{equation*}
+	with 
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix{
+					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\chi} & C \ar[d]^{c_{K^\prime}} \\
+					f^*K \ar[r]|{\bullet}_{\mathbi{b}^*} & g^*K^\prime 
+		}}}
+		\quad
+		=
+		\quad
+		\vcenter{\vbox{\xymatrix{
+					C \ar[d]_{\bar{c}} \ar@{=}[r] \ar@{}[dr]|{\mu} & C \ar[d]^{\bar{c'}} \\
+					f^*L \ar[r]|{\bullet}_{\mathbi{a}^*} \ar[d]_{\dot{q}} \ar@{}[dr]|{\omega} & g^*L^\prime \ar[d]^{\dot{q}^\prime}\\
+					f^*K \ar[r]|{\bullet}_{\mathbi{b}^*} & g^*K^\prime 
+		}}} \quad ,\
+		\quad
+		\vcenter{\vbox{\xymatrix{
+					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\alpha} & C \ar[d]^{c_{K^\prime}} \\
+					f^*I \ar[r]|{\bullet}_{\mathbi{c}^*} & g^*I^\prime 
+		}}}
+		\quad
+		=
+		\quad
+		\vcenter{\vbox{\xymatrix{
+					C \ar[d]_{\bar{c}} \ar@{=}[r] \ar@{}[dr]|{\mu} & C \ar[d]^{\bar{c'}} \\
+					f^*L \ar[r]|{\bullet}_{\mathbi{a}^*} \ar[d]_{\dot{q}} \ar@{}[dr]|{\varsigma} & g^*L^\prime \ar[d]^{\dot{q}^\prime}\\
+					f^*I \ar[r]|{\bullet}_{\mathbi{c}^*} & g^*I^\prime 
+		}}}.
+	\end{equation*}
+	For $i = I, K$ and $j = I', K'$ we have 
+	\begin{equation*}
+		\xymatrix@=1cm{
+			C \ar@{=}[rr] \ar[d] && C \ar@{=}[rr] && C \ar@{=}[rr] && C \ar[d] \\
+			f^*L \ar@{=}[rr] \ar[dr] \ar[dd] && f^*L \ar[dr] \ar[dd]|\hole \ar[rr]|{\bullet}^{\mathbi{a}^*} && g^*L' \ar[dr] \ar[dd]|\hole \ar@{=}[rr] && g^*L' \ar[dr]\ar[dd]|\hole \\
+			& L \ar@{=}[rr] \ar[dd] && L \ar[dd] \ar[rr]|(.3){\bullet}^(.3){\mathbi{a}} && L' \ar[dd] \ar@{=}[rr] && L' \ar[dd] \\
+			f^*i \ar@{=}[rr]|\hole \ar[dr] \ar[dd] && f^*i \ar[dd]|\hole  \ar[dr] && g^*j \ar[dr] \ar[dd] \ar@{=}[rr]|\hole && g^*j \ar[dr] \ar[dd]|\hole \\
+			& i \ar@{=}[rr] \ar[dd] && i \ar[dd]  && j \ar[dd] \ar@{=}[rr] && j \ar[dd] \\
+			f^*J \ar@{=}[rr]|\hole \ar[dr] && f^*J \ar[dr] \ar[rr]|\hole|(.7){\bullet}^(.7){\mathbi{d}^*}  && g^*J' \ar[dr] \ar@{=}[rr]|\hole && g^*J' \ar[dr] \\
+			& J \ar@{=}[rr] && J \ar[rr]|{\bullet}_{d} && J' \ar@{=}[rr] && J'
+		}
+	\end{equation*}
+	with the correspondence $i = I,\ j = K'$ and $i = K,\ j = I'$ and the cells
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix@=.7cm{
+					f^*L \ar[d]_{\cleav{f}{L}} \ar@{=}[r] \ar@{}[dr]|{\text{cart}} & f^*L \ar[d]^{\cleav{f}{L}} \\
+					L \ar@{=}[r] & L
+		}}}\quad
+		,\
+		\quad
+		\vcenter{\vbox{\xymatrix@=.7cm{
+					g^*L' \ar[d]_{\cleav{g}{L'}} \ar@{=}[r] \ar@{}[dr]|{\text{cart}} & g^*L' \ar[d]^{\cleav{g}{L'}} \\
+					L' \ar@{=}[r] & L'
+		}}}\quad
+		,\
+		\quad
+		\vcenter{\vbox{\xymatrix@=.7cm{
+					f^*i \ar[d]_{\cleav{f}{i}} \ar@{=}[r] \ar@{}[dr]|{\text{cart}} & f^*i \ar[d]^{\cleav{f}{i}} \\
+					i \ar@{=}[r] & i
+		}}}\quad
+		,\
+		\quad
+		\vcenter{\vbox{\xymatrix@=.7cm{
+					g^*j \ar[d]_{\cleav{g}{j}} \ar@{=}[r] \ar@{}[dr]|{\text{cart}} & g^*j \ar[d]^{\cleav{g}{j}} \\
+					j \ar@{=}[r] & j
+		}}}
+	\end{equation*}
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix@=.7cm{
+					f^*J \ar[d]_{\cleav{f}{L}} \ar@{=}[r] \ar@{}[dr]|{\text{cart}} & f^*J \ar[d]^{\cleav{f}{L}} \\
+					J \ar@{=}[r] & J
+		}}}\quad
+		,\
+		\quad
+		\vcenter{\vbox{\xymatrix@=.7cm{
+					g^*J' \ar[d]_{\cleav{g}{J'}} \ar@{=}[r] \ar@{}[dr]|{\text{cart}} & g^*J' \ar[d]^{\cleav{g}{J'}} \\
+					J' \ar@{=}[r] & J'
+		}}}\quad
+		,\
+		\quad
+		\vcenter{\vbox{\xymatrix@=.7cm{
+					f^*L \ar[d]_{\cleav{f}{L}} \ar[r]|{\bullet}^{\mathbi{a}^*} \ar@{}[dr]|{\text{cart}} & g^*L' \ar[d]^{\cleav{g}{L'}} \\
+					L \ar[r]|{\bullet}_{\mathbi{a}} & L'
+		}}}\quad
+		,\
+		\quad
+		\vcenter{\vbox{\xymatrix@=.7cm{
+		f^*J \ar[d]_{\cleav{f}{J}} \ar[r]|{\bullet}^{\mathbi{d}^*} \ar@{}[dr]|{\text{cart}} & g^*J' \ar[d]^{\cleav{g}{J'}} \\
+		J \ar[r]|{\bullet}_{\mathbi{d}} & J'
+		}}}
+	\end{equation*}
+	are cartesian. The desired mediating cell is given by 
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix{
+					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\zeta} & C \ar[d]^{c_{K^\prime}} \\
+					L \ar[r]|{\bullet}_{\mathbi{b}^*} & L^\prime 
+		}}}
+		\quad
+		=
+		\quad
+		\vcenter{\vbox{\xymatrix{
+					C \ar[d]_{\bar{c}} \ar@{=}[r] \ar@{}[dr]|{\delta} & C \ar[d]^{\bar{c'}} \\
+					f^*L \ar[r]|{\bullet}_{\mathbi{a}^*} \ar[d]_{\cleav{f}{L}} \ar@{}[dr]|{\substack{\varrho \\ \text{cart}}} & g^*L^\prime \ar[d]^{\cleav{g}{L'}}\\
+					L \ar[r]|{\bullet}_{\mathbi{a}} & L^\prime 
+		}}}
+	\end{equation*}
+	For any other cell $\zeta' = \frac{\delta'}{\varrho}$. It follows that $\delta' = \delta$ as both mediating arrows to the pullback under change of base for the cone given by vertical cells into $f^*i$ and $g^*j$. Thus we get that $\zeta = \zeta'$.
 \end{proof}
+
+\begin{defn}
+	A double fibration $\dfib{P}{E}{B}$ has fibred tabulators if every fibre of $\cat{P}_1(M)$ has tabulators.
+\end{defn}
+
+\begin{prop}
+	For a double fibration $\dfib{P}{E}{B}$ with fibred tabulators, cartesian lifts of proarrow identities $1^{\bullet}_X$ can always be reduced to tabulators of proarrow identities.
+\end{prop}
+
+\begin{lemma}
+	If a double fibration $\dfib{P}{E}{B}$ has fibred tabulators, then a tabulator in some fibre is a tabulator in $\dcat{E}$.
+\end{lemma}
+
+\begin{proof}
+	Let 
+	\begin{equation*}
+		\xymatrix{
+			E \ar@{=}[r]\ar[d]_{f} \ar@{}[dr]|{1_f} & E \ar[d]^{f} \\
+			D \ar@{=}[r] & D
+		}
+	\end{equation*}
+	be a cell in $\dcat{B}$ and 
+	\begin{equation*}
+		\xymatrix@=1cm{
+			Tu \ar@{=}[r] \ar[d]_{\pi_A} \ar@{}[dr]|{\pi} & Tu \ar[d]^{\pi_B} \\
+			{A} \ar[r]|{\bullet}_u & {B}
+		}
+	\end{equation*}
+	be a tabulator over $M$. Consider a double cone over $\pi$ given by 
+	\begin{equation*}
+		\xymatrix@=1cm{
+			&C \ar[dl]_{p} \ar[ddl]|\hole^(.59){h_1} \ar[dr]^{p} \ar[ddr]|\hole_(.59){h_2}\\
+			Tu \ar[d]_{\pi_A} \ar@{=}[rr] \ar@{}[drr]|{\pi} && Tu \ar[d]^{\pi_B} \\
+			A \ar[rr]|{\bullet}_u && B
+		}
+	\end{equation*}
+	with $\pi_A \comp p = h_1$ and $\pi_B \comp p = h_2$. Clearly, the cell
+	\begin{equation*}
+		\xymatrix@=1cm{
+			C \ar@{=}[r] \ar[d]_{h_1} \ar@{}[dr]|{\phi} & C \ar[d]^{h_2} \\
+			A \ar[r]|{\bullet}_u & B
+		}
+	\end{equation*}
+	lies over $1_f$. Let
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix@=1cm{
+					C \ar@{=}[r] \ar[d]_{h_1} \ar@{}[dr]|{\phi} & C \ar[d]^{h_2} \\
+					A \ar[r]|{\bullet}_u & B
+		}}} \quad = \quad 
+		\vcenter{\vbox{\xymatrix{
+					C \ar@{=}[r] \ar[d]_{c_A} \ar@{}[dr]|{\tau} & C \ar[d]^{c_B} \\
+					f^*A \ar[d]_{\cleav{f}{A}} \ar[r]|{\bullet}_{u^*} \ar@{}[dr]|{\text{cart}} & f^*B \ar[d]^{\cleav{f}{B}} \\
+					A \ar[r]|{\bullet}_{u} & B
+		}}}
+	\end{equation*}
+	be the vertical-cartesian factorization of $\phi$. Since every fibre has a tabulator, there is a vertical cell
+	\begin{equation*}
+		\xymatrix{
+			C \ar@{=}[r] \ar[d]_{p^*} \ar@{}[dr]|{1_{p^*}} & C \ar[d]^{p^*} \\
+			Tu^* \ar@{=}[r] & Tu^*
+		}
+	\end{equation*}
+	with $\frac{1_{k^*}}{\delta} = \tau$ where $\delta$ is the tabulator over $E$. As illustrated in the following diagram
+	\begin{equation*}
+		\xymatrix{
+			&& C \ar[ddrr]^{x_B} \ar[ddll]_{x_A} \ar[d]^{1_{k^*}} \\
+			&& Tu^* \ar[dll]^{\pi_A^*} \ar[drr]_{\pi_B^*} \ar[dd]|\hole_(.20){t}
+			\\
+			f^*A \ar[dd]_{\cleav{f}{A}}\ar[rrrr]|(.6){\bullet}_(.6){u^*} &&&& f^*B \ar[dd]^{\cleav{f}{B}}\\
+			&& Tu \ar[dll]_{\pi_A} \ar[drr]^{\pi_B} \\
+			A \ar[rrrr]|{\bullet}_{u} &&&& B
+		}
+	\end{equation*}
+	the cell $1_k \colon 1^{\bullet}_{C} \longrightarrow 1^{\bullet}_{Tu}$ given by
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix{
+					C \ar[d]_{k} \ar@{=}[r] \ar@{}[dr]|{1_k} & C \ar[d]^{k}\\
+					Tu \ar@{=}[r] & Tu
+		}}}
+		\quad
+		=
+		\quad
+		\vcenter{\vbox{\xymatrix{
+					C \ar[d]_{k^*} \ar@{=}[r] \ar@{}[dr]|{1_{k^*}} & X \ar[d]^{k^*}\\
+					Tu^* \ar[d]_{t} \ar@{}[dr]|{\substack{1_t \\ \text{cart}}} \ar@{=}[r] \ & Tu^* \ar[d]^{t} \\
+					Tu \ar@{=}[r] & Tu
+		}}}
+	\end{equation*}
+	where the bottom cell on the right is cartesian over $1_f$, is the desired mediating cell. 
+%	If $\alpha ^ \prime = \frac{\omega^\prime}{\beta}$ with $\omega^\prime$ vertical,  it holds that $\omega^\prime = \omega$ as both are mediating cells to the tabulator over $v$ for the cone given by vertical arrows $x_A$ and $x_B$, therefore $\alpha^\prime = \alpha$.
+\end{proof}
+
+\begin{remark}
+	The above formulation works over horizontal globular cells, in general we would not obtain a tabulator under change of base.
+\end{remark}
+
+\begin{remark}
+	It is clear from Proposition \ref{vc} that for any commuting cube where the front square is a tabulator and the bottom square is cartesian, then the back square is a tabulator if and only if the cube is a pullback.
+\end{remark}
+
+%\begin{lemma}
+%	Let $\dfib{P}{E}{B}$ be a double fibration with fibred tabulators and 
+%	\begin{equation*}
+%		\xymatrix{
+%			&L \ar[rr]|{\bullet}^{\mathbi{a}} \ar[dd]_(.7){v}|\hole \ar[dl]_{q} && L^\prime \ar[dd]^{v^\prime} \ar[dl]^{q^\prime} \\
+%			K \ar[rr]|(.6){\bullet}^(.6){\mathbi{b}} \ar[dd]_{p} && K^\prime \ar[dd]^(.3){p^\prime} \\
+%			& I \ar[rr]|(.3){\bullet}_(.3){\mathbi{c}}|\hole \ar[dl]_{u}  && I^\prime \ar[dl]^{u^\prime}  \\
+%			J \ar[rr]|{\bullet}_{\mathbi{d}} && J^\prime
+%		}
+%	\end{equation*}
+%	a commuting cube in $\dcat{E}$. We have the following 
+%	\begin{enumerate}
+%		\item   
+%	\end{enumerate}
+%\end{lemma}
+
 \bibliographystyle{siam}
 \bibliography{reference}
 
