@@ -95,6 +95,47 @@ Let $\cat{C}^2$ denote the slice category of $\cat{C}$ over itself
 	Every category $\cat{C}$ gives rise to a \emph{family fibration} $\mor{\cat{F}}{Fam(\cat{C})}{Set}$. A morphism $(u,\{\varphi_i\}_{i \in I})$ is cartesian when every $\varphi_i$ is an isomorphism. Then $\cat{F}$ is a fibration since given $\mor{u}{I}{J}$ and $\{Y_j\}_{j \in J}$, $\mor{(u,\{1_{Y_{u(i)}}\})}{\{Y_{u(i)}\}_{i \in I}}{\{Y_j\}_{j \in J}}$ is cartesian over $u$. 
 \end{example}
 
+In order to describe double fibrations, we recall the construction of cylinder 2-categories from \cite{JBbica,Crutt}
+
+\begin{defn}
+	There is a 2-category $\mathsf{Arr}^l(\cat{K})$. It contains
+	\begin{enumerate}
+		\item Obj: arrows of $\cat{K}$ \\
+		\item 1-cell: 
+		\begin{equation*}
+			\xymatrix@=1cm{
+				A \ar[d]_{a} \ar[r]^{f} \ar@{}[dr]|{\Downarrow \varphi} & B \ar[d]^{b} \\
+				A' \ar[r]_{f'} & B'
+			}
+		\end{equation*}
+		\item A 2-cell 
+		\begin{equation*}
+			\xymatrix@=1cm{
+				(A,A',a) \ar@<1.5ex>[rr]^{(f,f',\varphi)} \ar@<-1.5ex>[rr]_{(g,g',\psi)} & \Downarrow(\alpha, \alpha') & (B,B',b)
+			}
+		\end{equation*}
+		satisfying the pasting 
+		\begin{equation*}
+			\vcenter{\vbox{\xymatrix@=1cm{
+						A \ar[d]_{a} \rtwocell^{f}_{g}{\alpha} \rtwocell<\omit>{<7>\psi} & \ar[d]^{b} \\
+						A' \ar@/_.5pc/[r]_g  & B'
+			}}} \quad = \quad
+			\vcenter{\vbox{\xymatrix{
+						A' \ar[d]_{a} \ar@/^.5pc/[r]^{f} \rtwocell<\omit>{<1>\varphi} & B' \ar[d]^{b} \\
+						A \rtwocell^{f}_{g}{\alpha} & B.
+			}}}
+		\end{equation*}
+%		\begin{equation*}
+%			\xymatrix{
+%				A' \ar[d]_{a} \rtwocell^{f'}_{g'}{\alpha'} \rtwocell<\omit>{<5>\psi} & B' \ar[d]^{b} \\
+%				A' \ar@/_.5pc/[r]_g  & B'
+%			}
+%		\end{equation*}
+	\end{enumerate}
+\end{defn}
+
+There are two $2$-functors $\mathsf{Arr}^l(\cat{K}) \to \cat{K}$. Moreover, $\mathsf{Arr}^l(\cat{K})$ contains $\mathsf{Arr}^s(\cat{K})$ as a sub-2-category with the same objects and 2-cells, where for arrows the 2-cell filling the square is an identity. When $\cat{K} = \Cat$  we obtain a $2$-category $\Fib$ of fibrations and cartesian functors. There is a forgetful functor $\Fib \to \mathsf{Arr}^s(\Cat)$ that is full on 2-cells. We also have $\mathbf{cFib}$ as a sub-2-category of $\Fib$ where the the morphisms are cleavage-preserving.
+
 \subsection{Fibred Finite Limits}
 
 In \cite{TS} fibred finite limits are given in terms of terminal objects and pullbacks. Furthermore, \cite{JacobsCLTT} captures the notion of fibred terminal objects in $\mathbf{Fib}$ using fibred adjunctions. 
