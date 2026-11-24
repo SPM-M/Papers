@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{ElenaMesitiPronk}
 {\sc C.~B. Aberl{\'e}, E.~Caviglia, M.~Kukla, R.~Maldonado, L.~Mesiti,
@@ -22,6 +22,11 @@
 \bibitem{LMP}
 {\sc M.~Grandis and R.~Par{\'e}}, {\em Limits in double categories}, Cah.
   Topologie G{\'e}om. Diff{\'e}r. Cat{\'e}goriques, 40 (1999), pp.~162--220.
+
+\bibitem{Gray}
+{\sc J.~W. Gray}, {\em Fibred and cofibred categories}.
+\newblock Proc. {Conf}. {Categor}. {Algebra}, {La} {Jolla} 1965, 21-83 (1966).,
+  1966.
 
 \bibitem{JacobsCLTT}
 {\sc B.~Jacobs}, {\em Categorical Logic and Type Theory}, vol.~141 of Studies

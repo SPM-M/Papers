@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Fibred_Tabulators.aux
 The style file: siam.bst
 Database file #1: reference.bib
-You've used 9 entries,
+You've used 10 entries,
             2030 wiz_defined-function locations,
-            560 strings with 4993 characters,
-and the built_in function-call counts, 3482 in all, are:
-= -- 352
-> -- 127
+            566 strings with 5114 characters,
+and the built_in function-call counts, 3691 in all, are:
+= -- 370
+> -- 134
 < -- 0
-+ -- 52
-- -- 42
-* -- 249
-:= -- 507
-add.period$ -- 12
-call.type$ -- 9
-change.case$ -- 47
++ -- 55
+- -- 44
+* -- 260
+:= -- 543
+add.period$ -- 14
+call.type$ -- 10
+change.case$ -- 51
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 156
-empty$ -- 268
-format.name$ -- 42
-if$ -- 764
+cite$ -- 10
+duplicate$ -- 165
+empty$ -- 290
+format.name$ -- 44
+if$ -- 808
 int.to.chr$ -- 0
-int.to.str$ -- 9
+int.to.str$ -- 10
 missing$ -- 7
-newline$ -- 33
-num.names$ -- 18
-pop$ -- 52
+newline$ -- 37
+num.names$ -- 20
+pop$ -- 59
 preamble$ -- 1
-purify$ -- 39
+purify$ -- 42
 quote$ -- 0
-skip$ -- 153
+skip$ -- 159
 stack$ -- 0
-substring$ -- 294
-swap$ -- 80
+substring$ -- 299
+swap$ -- 82
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 34
+type$ -- 38
 warning$ -- 0
-while$ -- 33
-width$ -- 10
-write$ -- 83
+while$ -- 35
+width$ -- 12
+write$ -- 92

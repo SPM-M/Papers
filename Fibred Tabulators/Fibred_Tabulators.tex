@@ -125,16 +125,12 @@ In order to describe double fibrations, we recall the construction of cylinder 2
 						A \rtwocell^{f}_{g}{\alpha} & B.
 			}}}
 		\end{equation*}
-%		\begin{equation*}
-%			\xymatrix{
-%				A' \ar[d]_{a} \rtwocell^{f'}_{g'}{\alpha'} \rtwocell<\omit>{<5>\psi} & B' \ar[d]^{b} \\
-%				A' \ar@/_.5pc/[r]_g  & B'
-%			}
-%		\end{equation*}
 	\end{enumerate}
 \end{defn}
 
-There are two $2$-functors $\mathsf{Arr}^l(\cat{K}) \to \cat{K}$. Moreover, $\mathsf{Arr}^l(\cat{K})$ contains $\mathsf{Arr}^s(\cat{K})$ as a sub-2-category with the same objects and 2-cells, where for arrows the 2-cell filling the square is an identity. When $\cat{K} = \Cat$  we obtain a $2$-category $\Fib$ of fibrations and cartesian functors. There is a forgetful functor $\Fib \to \mathsf{Arr}^s(\Cat)$ that is full on 2-cells. We also have $\mathbf{cFib}$ as a sub-2-category of $\Fib$ where the the morphisms are cleavage-preserving.
+There are two $2$-functors $\mathsf{Arr}^l(\cat{K}) \to \cat{K}$. Moreover, $\mathsf{Arr}^l(\cat{K})$ contains $\mathsf{Arr}^s(\cat{K})$ as a sub-2-category with the same objects and 2-cells, where for arrows the 2-cell filling the square is an identity. When $\cat{K} = \Cat$  one obtains the $2$-category $\Fib$ of fibrations and cartesian functors. There is a forgetful functor $\Fib \to \mathsf{Arr}^s(\Cat)$ that is full on 2-cells. We also have $\mathbf{cFib}$ as a sub-2-category of $\Fib$ in which the morphisms are given by cleavage-preserving functors. Moreover, $2$-pullbacks in $\mathbf{cFib}$ are computed pointwise and both the inclusion $2$-functor $\mathbf{cFib} \hookrightarrow \Fib$ and forgetful functor $\mathbf{cFib} \to \mathsf{Arr}^s(\Cat)$ preserve $2$-pullbacks, see \cite[Appendix A]{Crutt}. 
+
+
 
 \subsection{Fibred Finite Limits}
 
@@ -219,6 +215,19 @@ The following result is a consequence of Lemma \ref{fibredterminals} and Theorem
 	For a category $\cat{B}$ with finite limits, a fibration $\fib$ has fibred finite limits if and only if $\cat{E}$ has finite limits and $P$ preserves finite limits. 
 \end{thm}
 
+We recall the following fibration due to J. B\'{e}nabou which is used to define fibred (co)limits.
+
+\begin{prop}
+	Given a fibration $\fib$ and a small category $\cat{I}$, then $\funct{p^\cat{I}}{\cat{E}^{\cat{I}}}{\cat{B}^{\cat{I}}}$	 is a fibration. 
+\end{prop}
+
+\begin{proof}
+	See \cite[Proposition 3.6]{Gray}.
+\end{proof}
+
+\begin{defn}
+	For any small category $\cat{I}$, a fibration $\fib$ has fibred $\cat{I}$-limits (resp. colimits) if and only if the fibred functor $\funct{\widehat{\Delta}_\cat{I}}{P}{\Delta_\cat{I}^*}(P^{\cat{I}})$, uniquely determined in the diagram below, has a fibred right (resp. left) adjoint $\widehat{\Delta}_\cat{I} \adj \widehat{\text{lim}}$
+\end{defn}
 
 \section{Double Categories}
 
@@ -367,22 +376,26 @@ A functor $\funct{G}{\dcat{E}}{\dcat{A}}$ between double categories with vertica
 	\end{equation*}
 	where $\mathsf{2} = \{\bot \to \top\}$.
 \end{example}
-Although there is a 2-dimensional property of tabulators, it will play no role here. Hence, we shall refer to 1-tabulators as tabulators. We have the following result 
+Although there is a 2-dimensional property of tabulators, it will play no role here. Hence, we shall refer to 1-tabulators as tabulators. We have the following results 
 
 \begin{lemma}[\cite{LMP}]
 	A double category $\dcat{D}$ has tabulators if and only if  the functor $\funct{i}{\cat{D}_0}{\cat{D}_1}$ has a right adjoint.
 \end{lemma}
 
-\begin{thm}
+\begin{thm}\cite[$\S 6.4$ ibid]{LMP}
 	The double category $\dcat{D}$ has all small (resp. finite) double limits if and only if it has small (resp. finite) double products, double equalizers and tabulators.
 \end{thm}
 
 \section{Double Fibrations}
 \begin{lemma}[\cite{Crutt}]
-	Given a diagram $s \colon P_1 \to P_0 \leftarrow P_1 \colon t$ in $\mathbf{cFib}$, a pseudo category structure in $\mathbf{Fib}$ (resp. $\mathbf{cFib}$) is the same as two pseudo double category structure obtained by applying the top and bottom 2-functors,
+	Given a diagram $s \colon P_1 \to P_0 \leftarrow P_1 \colon t$ in $\mathbf{cFib}$, a pseudo category structure $(P_1, P_0, s, t, \iota, \phi, \mathfrak{a}, \mathfrak{r}, \mathfrak{l})$ in $\mathbf{Fib}$ (resp. $\mathbf{cFib}$) is the same as two pseudo double category structure obtained by applying the top and bottom 2-functors,
+	\begin{equation*}
+		\dcat{E} = (\cat{E}_1, \cat{E}_0, s^\top, t^\top, \iota^\top, \phi^\top, \mathfrak{a}^\top, \mathfrak{r}^\top, \mathfrak{l}^\top),\ \dcat{B} = (\cat{D}_1, \cat{D}_0, s^\bot, t^\bot, \iota^\bot, \phi^\bot, \mathfrak{a}^\bot, \mathfrak{r}^\bot, \mathfrak{l}^\bot)
+	\end{equation*}
+	and a strict functor $P = (\cat{P}_1, \cat{P}_0, \iota, \phi)$ such that $\iota$ and $\phi$ are morphisms in $\Fib$ (resp. $\mathbf{cFib}$).
 \end{lemma}
 
-\begin{defn}[\cite{Crutt}]
+\begin{defn}\cite[$\S 2$ ibid]{Crutt}
 	A strict double functor $\dfib{P}{E}{B}$ between pseudo double categories given by 
 	
 	\begin{equation*}
@@ -582,13 +595,13 @@ over $\psi$.
 	lie over the same cell $\psi$. Futhermore, let 
 	\begin{equation*}
 		\vcenter{\vbox{\xymatrix{
-					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\chi} & C \ar[d]^{c_{K^\prime}} \\
+					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\nu} & C \ar[d]^{c_{K^\prime}} \\
 					f^*K \ar[r]|{\bullet}^{\mathbi{b}^*} \ar[d]_{\cleav{f}{K}} \ar@{}[dr]|{\text{cart}} & g^*K^\prime \ar[d]^{\cleav{g}{K^\prime}} \\
 					K \ar[r]|{\bullet}_{\mathbi{b}} & K^\prime
 		}}}
 		\qquad
 		\vcenter{\vbox{\xymatrix{
-					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\chi} & C \ar[d]^{c_{K^\prime}} \\
+					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\sigma} & C \ar[d]^{c_{K^\prime}} \\
 					f^*I \ar[r]|{\bullet}^{\mathbi{c}^*} \ar[d]_{\cleav{f}{I}} \ar@{}[dr]|{\text{cart}} & g^*I^\prime \ar[d]^{\cleav{g}{I^\prime}} \\
 					I \ar[r]|{\bullet}_{\mathbi{c}} & I^\prime
 		}}}
@@ -603,7 +616,7 @@ over $\psi$.
 	with 
 	\begin{equation*}
 		\vcenter{\vbox{\xymatrix{
-					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\chi} & C \ar[d]^{c_{K^\prime}} \\
+					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\nu} & C \ar[d]^{c_{K^\prime}} \\
 					f^*K \ar[r]|{\bullet}_{\mathbi{b}^*} & g^*K^\prime 
 		}}}
 		\quad
@@ -616,7 +629,7 @@ over $\psi$.
 		}}} \quad ,\
 		\quad
 		\vcenter{\vbox{\xymatrix{
-					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\alpha} & C \ar[d]^{c_{K^\prime}} \\
+					C \ar[d]_{c_K} \ar@{=}[r] \ar@{}[dr]|{\sigma} & C \ar[d]^{c_{K^\prime}} \\
 					f^*I \ar[r]|{\bullet}_{\mathbi{c}^*} & g^*I^\prime 
 		}}}
 		\quad
@@ -823,7 +836,7 @@ over $\psi$.
 %\end{lemma}
 
 \begin{example}
-	Let $\dcat{D}$ be a double category with tabulators. Then $\funct{\textbf{cod}}{\dcat{D}^2}{\dcat{D}}$ is a double fibration with fibred tabulors. Moreover, $\textbf{cod}$ preserves tabulators.
+	Let $\dcat{D}$ be a double category with tabulators. Then the double fibration $\funct{\textbf{cod}}{\dcat{D}^2}{\dcat{D}}$ preserves tabulators. A tabulator in $\dcat{D}^2$ is given by a horizontal globular cell between tabulator objects. 
 \end{example}
 
 \bibliographystyle{siam}
