@@ -226,7 +226,21 @@ We recall the following fibration due to J. B\'{e}nabou which is used to define 
 \end{proof}
 
 \begin{defn}
-	For any small category $\cat{I}$, a fibration $\fib$ has fibred $\cat{I}$-limits (resp. colimits) if and only if the fibred functor $\funct{\widehat{\Delta}_\cat{I}}{P}{\Delta_\cat{I}^*}(P^{\cat{I}})$, uniquely determined in the diagram below, has a fibred right (resp. left) adjoint $\widehat{\Delta}_\cat{I} \adj \widehat{\text{lim}}$
+	For any small category $\cat{I}$, a fibration $\fib$ has fibred $\cat{I}$-limits (resp. colimits) if and only if the fibred functor $\funct{\widehat{\Delta}_\cat{I}}{P}{\Delta_\cat{I}^*}(P^{\cat{I}})$, uniquely determined in the diagram below, has a fibred right (resp. left) adjoint $\widehat{\Delta}_\cat{I} \adj \underset{\leftarrow}{\widehat{\text{lim}}}$
+	\begin{equation*}
+		\xymatrix@=1cm{
+			\cat{E} \ar[ddddrr]_{P} \ar[ddrr]|{\widehat{\Delta_\cat{I}}} \ar[ddrrrr]^{\overline{\Delta_{\cat{I}}}}\\
+			\\
+			&& \Delta_\cat{I}^*(\cat{E}) \ar[dd]^{\Delta_\cat{I}^*(P^\cat{I})} \ar[rr]_{(P^{\cat{I}})^*(\Delta_\cat{I})} && \cat{E}^{\cat{I}} \ar[dd]^{P^{\cat{I}}}\\
+			\\
+			&& \cat{B} \ar[rr]_{\Delta_\cat{I}} && \cat{B}^{\cat{I}}
+		}
+	\end{equation*}
+	where $\funct{\Delta_\cat{I}}{\cat{B}}{\cat{B}^\cat{I}}$ and $\funct{\overline{\Delta_{\cat{I}}}}{\cat{B}}{\cat{B}^\cat{I}}$ are diagonal functors. 
+	
+	\begin{remark}
+		A fibration $\fib$ has fibred $\cat{I}$-(co)limits if every fibre has $\cat{I}$-(co)limits and the reindexing functors preserve $\cat{I}$-(co)limits \ie, they are $\cat{I}$-(co)continuous. \footnote{The formulation of \emph{fibred adjunctions} to define fibred limits is comprehensively outlined in \cite{Her99}}.
+	\end{remark}
 \end{defn}
 
 \section{Double Categories}
@@ -421,7 +435,7 @@ Although there is a 2-dimensional property of tabulators, it will play no role h
 \end{example}
 
 \begin{example}[\cite{ElenaMesitiPronk}]
-	The image double functor $\funct{\text{Im}}{\cspan}{\mathbb{R}\text{el}}$ with $\funct{\text{Im}}{Set}{Set}$ and $\funct{\text{Im}}{\cspan_1}{\mathbb{R}\text{el}_1}$ sending a span $\hspan{A}{C}{B}{f}{g}$ to  the image of $C \xlongrightarrow{(f,g)} A \times B$ seen as a relation and a cell
+	The image double functor $\funct{\textbf{Im}}{\cspan}{\mathbb{R}\text{el}}$ with $\funct{\text{Im}_0}{Set}{Set}$ and $\funct{\text{Im}_1}{\cspan_1}{\mathbb{R}\text{el}_1}$ sending a span $\hspan{A}{C}{B}{f}{g}$ to  the image of $C \xlongrightarrow{(f,g)} A \times B$ seen as a relation and a cell
 	\begin{equation*}
 		\xymatrix{
 			A \ar[d]_u & C \ar[d]^s \ar[l]_f \ar[r]^g & B \ar[d]^v \\
@@ -720,6 +734,10 @@ over $\psi$.
 	For any other cell $\zeta' = \frac{\delta'}{\varrho}$. It follows that $\delta' = \delta$ as both mediating arrows to the pullback under change of base for the cone given by vertical cells into $f^*i$ and $g^*j$. Thus we get that $\zeta = \zeta'$.
 \end{proof}
 
+\begin{thm}
+	A double fibration $\dfib{P}{E}{B}$ 
+\end{thm}
+
 \begin{defn}
 	A double fibration $\dfib{P}{E}{B}$ has fibred tabulators if every fibre of $\cat{P}_1(M)$ has tabulators.
 \end{defn}
@@ -839,6 +857,12 @@ over $\psi$.
 	Let $\dcat{D}$ be a double category with tabulators. Then the double fibration $\funct{\textbf{cod}}{\dcat{D}^2}{\dcat{D}}$ preserves tabulators. A tabulator in $\dcat{D}^2$ is given by a horizontal globular cell between tabulator objects. 
 \end{example}
 
+The image double fibration $\textbf{Im}$ does not preserve tabulators, it is left adjoint to the inclusion double functor $\mathbb{R}\text{el} \hookrightarrow \cspan$. However, \textbf{Im} preserves identities and composition up to isomorphism\footnote{The adjunction is pseudo/lax}. Moreover, it preserves tabulators of proarrow idenitites. \\
+
+In general our double fibrations do not preserve tabulators. There is no straightforward way to characterize preservation property for fibred tabulators. We have the following restriced case
+\begin{thm}
+	Let $\dcat{B}$ be a double category with tabulators. A double fibration $\dfib{P}{E}{B}$ has fibred tabulators if and only if $\dcat{E}$ has fibred tabulators and $P$ preserves fibred tabulators.
+\end{thm}
 \bibliographystyle{siam}
 \bibliography{reference}
 
