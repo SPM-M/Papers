@@ -457,10 +457,10 @@ Although there is a 2-dimensional property of tabulators, it will play no role h
 For the rest of this section, we fix $\dcat{B}$ a pseudo category internal in $\mathbf{PBCat}$ as in Definition \ref{vp.bs}. 
 
 \begin{defn}
-	A double fibration $\dfib{P}{E}{B}$ has fibred terminal objects if every fibre of $\cat{P}_0$ and $\cat{P}_1$ has a terminal object and these are preserved by cartesianness respectively. 
+	A double fibration $\dfib{P}{E}{B}$ has fibred terminal objects if every fibre of $\cat{P}_0$ and $\cat{P}_1$ has a terminal object and these are preserved by reindexing functors respectively. 
 \end{defn}
 
-$\cat{P}_0$ is ordinary fibration with fibred terminals. Let $M \in \dcat{D}_1$ be an object, the fibre $\cat{P}_1(M)$ over $M$ consists of proarrows $A$ such that $\cat{P}_1{A} = M$ and cells 
+$\cat{P}_0$ is an ordinary fibration with fibred terminals. Let $M \in \dcat{D}_1$ be an object, the fibre $\cat{P}_1(M)$ over $M$ consists of proarrows $A$ such that $\cat{P}_1{A} = M$ and cells 
 \begin{equation*}
 	\xymatrix{
 		{} \ar[r]|-{\bullet}^{A} \ar[d]_{f} \ar@{}[dr]|{\alpha} & {} \ar[d]^{g} \\
@@ -563,6 +563,34 @@ over $\psi$.
 	\end{equation*}
 	Thus $\tilde{\gamma}_K$ is the unique cone morphism.
 	
+\end{proof}
+
+\begin{lemma}
+	Let $\dfib{P}{E}{B}$ be a double fibration. A commuting square 
+	\begin{equation*}
+		\xymatrix{
+			&C \ar[rr]|{\bullet}^{\mathbi{p}} \ar[dd]_(.7){k}|\hole \ar[dl]_{g} && C^\prime \ar[dd]^{k^\prime} \ar[dl]^{g^\prime} \\
+			D \ar[rr]|(.6){\bullet}^(.6){\mathbi{q}} \ar[dd]_{l} && D^\prime \ar[dd]^(.3){l^\prime} \\
+			& A \ar[rr]|(.3){\bullet}_(.3){\mathbi{u}}|\hole \ar[dl]_{f}  && A^\prime \ar[dl]^{f^\prime}  \\
+			B \ar[rr]|{\bullet}_{\mathbi{v}} && B^\prime
+		}
+	\end{equation*}
+	where the top and bottom squares are cartesian and the front and back squares are vertical is always a pullback in $\dcat{E}_1$.
+\end{lemma}
+
+\begin{proof}
+	Let $\alpha$ and $\beta$ be the top and bottom squares respectively, and $\eta$ and $\omega$ be the front and back squares respectively. Consider a double cone over $\eta$ and $\beta$ \ie, for a proarrow $\ipro{X}$ we have the cells
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix{
+					X \ar[d]_{x_A} \ar@{=}[r] \ar@{}[dr]|{\chi_{\mathbi{u}}} & X \ar[d]^{x_{A'}} \\					
+					A \ar[r]|{\bullet}_{\mathbi{u}} & A'
+		}}} \qquad
+		\vcenter{\vbox{\xymatrix{
+					X \ar[d]_{x_D} \ar@{=}[r] \ar@{}[dr]|{\chi_{\mathbi{q}}} & X \ar[d]^{x_{D'}} \\					
+					D \ar[r]|{\bullet}_{\mathbi{q}} & D'
+		}}}
+	\end{equation*}
+	such that $\frac{\chi_\mathbi{q}}{\eta} = \frac{\chi_\mathbi{u}}{\beta}$. Since $\alpha$ is cartesian over some cell say $\vartheta$ in $\dcat{B}$, there is a unique cell $\chi_\mathbi{p}$. We note that $\beta$ is also cartesian over $\vartheta$, we have the unique cell $\chi_{\mathbi{u}}$ that we started with. Moreover, $\chi_{\mathbi{u}}$ is given by the composition $\chi_{\mathbi{u}} = \frac{\chi_{\mathbi{p}}}{\omega}$. Using cartesianness, these unique cells must be equal, hence $\chi_{\mathbi{p}}$ is a (unique)cone morphism.
 \end{proof}
 
 \begin{thm}
@@ -742,11 +770,11 @@ over $\psi$.
 	A double fibration $\dfib{P}{E}{B}$ has fibred tabulators if every fibre of $\cat{P}_1(M)$ has tabulators.
 \end{defn}
 
-\begin{prop}
+\begin{prop}\label{cartabu}
 	For a double fibration $\dfib{P}{E}{B}$ with fibred tabulators, cartesian lifts of proarrow identities $1^{\bullet}_X$ can always be reduced to tabulators of proarrow identities.
 \end{prop}
 
-\begin{lemma}
+\begin{lemma}\label{fibred tabulators}
 	If a double fibration $\dfib{P}{E}{B}$ has fibred tabulators, then a tabulator in some fibre is a tabulator in $\dcat{E}$.
 \end{lemma}
 
@@ -861,8 +889,20 @@ The image double fibration $\textbf{Im}$ does not preserve tabulators, it is lef
 
 In general our double fibrations do not preserve tabulators. There is no straightforward way to characterize preservation property for fibred tabulators. We have the following restriced case
 \begin{thm}
-	Let $\dcat{B}$ be a double category with tabulators. A double fibration $\dfib{P}{E}{B}$ has fibred tabulators if and only if $\dcat{E}$ has fibred tabulators and $P$ preserves fibred tabulators.
+	Let $\dcat{B}$ be a double category with tabulators. A double fibration $\dfib{P}{E}{B}$ has fibred tabulators (of proarrow identities) if and only if $\dcat{E}$ has fibred tabulators (of proarrow identities) and $P$ preserves fibred tabulators (of proarrow identities).
 \end{thm}
+
+\begin{proof}
+	Suppose $P$ has fibred tabulators. Let $\funct{\psi}{A}{B}$ be a vertical arrow and $\varphi \comp \vartheta$ be the vertical-cartesian factorization of $\psi$. Consider the following diagram
+	\begin{equation*}
+		\xymatrix{
+			A \ar[d]_{\vartheta} \ar@{=}[r] \ar@{}[dr]|{\text{tab}} & A \ar[d]^{\vartheta} \\
+			f^*B \ar[d]_{\varphi} \ar@{=}[r] \ar@{}[dr]|{\text{cart}} & f^*B \ar[d]^{\varphi} \\
+			B \ar@{=}[r] & B
+		}
+	\end{equation*}
+	where the top cell is a tabulator in some fibre. Then the top cell is a tabulator in $\dcat{E}$ by Lemma \ref{fibred tabulators}. The bottom square is a tabulator by Proposition \ref{cartabu}. It's a straightforward verification that the vertical composite is a tabulator in $\dcat{E}$ over a tabulator in $\dcat{B}$. Thus, $\dcat{E}$ has fibred tabulators (of proarrow identities) and $P$ preserves them.
+\end{proof}
 \bibliographystyle{siam}
 \bibliography{reference}
 
