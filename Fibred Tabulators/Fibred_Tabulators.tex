@@ -146,7 +146,7 @@ In $\slicec{\cat{B}}$, the category of fibrations over $\cat{B}$, a fibration $P
 	Let $\cat{B}$ be a category with a terminal object $\ter{B}$. Then $\fib$ has fibred terminals if and only if $\cat{E}$ has a terminal $1_\cat{E}$ and $P(\ter{E})$ is a terminal in $\cat{B}$.
 \end{lemma}
 
-\begin{proof}
+\begin{proof}(Sketch)
 	Consider the following diagram in $\Fib$
 	
 	\begin{equation*}
@@ -156,6 +156,7 @@ In $\slicec{\cat{B}}$, the category of fibrations over $\cat{B}$, a fibration $P
 			B \ar@<1.4ex>[rr]^{!_\cat{B}} & \perp & 1 \ar@<1.4ex>[ll]^{\ter{B}}
 		}
 	\end{equation*}
+	where $id$ is a terminal object in $\Fib$.
 \end{proof}
 
 Futhermore, we have the following theorem
@@ -244,9 +245,8 @@ We recall the following fibration due to J. B\'{e}nabou which is used to define 
 \end{defn}
 
 \section{Double Categories}
-
+The notion of a double category generalizes that of a $2$-category. It can be thought of as two categories with the same objects, \ie it comes with two different kind of arrows and these arrows together form cells. More formally, a double category is a category object in $\Cat$.
 \subsection{Basic Notions}
-%In this section investigate fibred limits of double fibrations. In particular, we introduce the notion of \emph{fibred tabulators} \ie, a strict double fibration of double categories with tabulators.
 
 \begin{defn}
 	A double category $\dcat{D}$ is a pseudo category in $\Cat$, it consists of the following diagram 
@@ -401,6 +401,8 @@ Although there is a 2-dimensional property of tabulators, it will play no role h
 \end{thm}
 
 \section{Double Fibrations}
+Similar to double categories, double fibrations generalise 2-fibrations. A double fibration has two components that are both fibrations (in their own sense) such that the composition and identity maps are cartesian functors and the source and target maps are cleavage-preserving. Futhermore, a double fibration is a category object in $\Fib$. There are various notions of double fibrations, we will consider the strict one.
+
 \begin{lemma}[\cite{Crutt}]
 	Given a diagram $s \colon P_1 \to P_0 \leftarrow P_1 \colon t$ in $\mathbf{cFib}$, a pseudo category structure $(P_1, P_0, s, t, \iota, \phi, \mathfrak{a}, \mathfrak{r}, \mathfrak{l})$ in $\mathbf{Fib}$ (resp. $\mathbf{cFib}$) is the same as two pseudo double category structure obtained by applying the top and bottom 2-functors,
 	\begin{equation*}
@@ -452,8 +454,23 @@ Although there is a 2-dimensional property of tabulators, it will play no role h
 	where $\funct{\tilde{s}}{\text{Im}(f,g)}{\text{Im}(l,k)}$ is the function mapping $(f(c),g(c))$ to $(l(s(c)), k(s(c)))$.
 \end{example}
 
+We briefly describe change of base in a double fibration(on both levels of a double fibration).
+
+Given a double fibration $\dfib{P}{E}{B}$, for a vertical arrow $\mor{u}{I}{J}$ and a cell $\mor{\alpha}{N}{M}$ we have the reindexing functors
+\begin{equation*}
+	\mor{u^*}{\cat{E}_0^J}{\cat{E}_0^I} \quad ,\ \quad \mor{\alpha^*}{\cat{E}_1^M}{\cat{E}_1^N}
+\end{equation*}
+obtained in the usual fibrational sense such that the following diagram commutes
+\begin{equation*}
+	\xymatrix@=1cm{
+		\cat{E}_1^M \ar[d]_{(s,t)} \ar[r]^{\alpha^*} & \cat{E}_1^N \ar[d]^{(s,t)} \\
+		\cat{E}_0^J \ar[r]_{u^*} & \cat{E}_0^I
+	}
+\end{equation*}
+
 
 \subsection{Fibred double limits}
+In section we shall describe finite fibred double limits. In particular, we describe fibred tabulators. 
 For the rest of this section, we fix $\dcat{B}$ a pseudo category internal in $\mathbf{PBCat}$ as in Definition \ref{vp.bs}. 
 
 \begin{defn}
@@ -468,7 +485,7 @@ $\cat{P}_0$ is an ordinary fibration with fibred terminals. Let $M \in \dcat{D}_
 	}
 \end{equation*}
 
-over the globular cell
+over the vertical globular cell
 
 \begin{equation*}
 	\xymatrix{
@@ -489,83 +506,83 @@ over $\psi$.
 	Let $\dcat{B}$ have terminal objects. A double fibration $\dfib{P}{E}{B}$ has fibred terminals if and only if $\dcat{E}$ has terminals and $P_0$ and $P_1$ preserve terminal objects.
 \end{lemma}
 
-%In a double fibration $\dfib{P}{E}{B}$ the functor $\funct{i}{\cat{E}}{\cat{E}_1}$
-\begin{prop}\label{vc}
-	Let $\dfib{P}{E}{B}$ be a double fibration. A commuting cube 
-	\begin{equation*}
-		\xymatrix{
-			&K \ar@{=}[rr] \ar[dd]^(.3){v}|\hole \ar[dl]_{q} && K \ar[dd]^{v} \ar[dl]^{q} \\
-			L \ar@{=}[rr] \ar[dd]_{p} && L \ar[dd]^(.3){p} \\
-			& I \ar@{=}[rr]|\hole \ar[dl]_{u}  && I \ar[dl]^{u}  \\
-			J \ar@{=}[rr] && J
-		}
-	\end{equation*}
-	where the top and bottom squares are cartesian and the front and back squares are vertical is always a vertical pullback in $\dcat{E}_1$.
-\end{prop}
+%%In a double fibration $\dfib{P}{E}{B}$ the functor $\funct{i}{\cat{E}}{\cat{E}_1}$
+%\begin{prop}\label{vc}
+%	Let $\dfib{P}{E}{B}$ be a double fibration. A commuting cube 
+%	\begin{equation*}
+%		\xymatrix{
+%			&K \ar@{=}[rr] \ar[dd]^(.3){v}|\hole \ar[dl]_{q} && K \ar[dd]^{v} \ar[dl]^{q} \\
+%			L \ar@{=}[rr] \ar[dd]_{p} && L \ar[dd]^(.3){p} \\
+%			& I \ar@{=}[rr]|\hole \ar[dl]_{u}  && I \ar[dl]^{u}  \\
+%			J \ar@{=}[rr] && J
+%		}
+%	\end{equation*}
+%	where the top and bottom squares are cartesian and the front and back squares are vertical is always a vertical pullback in $\dcat{E}_1$.
+%\end{prop}
+%
+%\begin{proof}
+%	The top and bottom faces are cartesian since the functor $\funct{i}{\cat{E}_0}{\cat{E}_1}$ preserves cartesian morphisms. Consider the a cone over the front and back faces \ie, for an object $1^{\bullet}_X$ we have cells
+%	\begin{equation*}
+%			\vcenter{\vbox{\xymatrix{
+%						X \ar[d]_{x_I} \ar@{=}[r] \ar@{}[dr]|{\gamma_I} & X \ar[d]^{x_I} \\					
+%						I \ar@{=}[r] & I
+%			}}} \qquad
+%			\vcenter{\vbox{\xymatrix{
+%						X \ar[d]_{x_L} \ar@{=}[r] \ar@{}[dr]|{\gamma_L} & X \ar[d]^{x_L} \\					
+%						L \ar@{=}[r] & L
+%			}}}
+%		\end{equation*}
+%		such that
+%		\begin{equation*}
+%			\vcenter{\vbox{\xymatrix{
+%						X \ar[d]_{x_I} \ar@{=}[r] \ar@{}[dr]|{\gamma_I} & X \ar[d]^{x_I}	 \\
+%						I \ar[d]_{u} \ar@{=}[r] \ar@{}[dr]|{1_u} & I \ar[d]^{u} \\
+%						J \ar@{=}[r] & J
+%			}}} \quad
+%			=
+%			\quad
+%			\vcenter{\vbox{\xymatrix{
+%						X \ar[d]_{x_L} \ar@{=}[r] \ar@{}[dr]|{\gamma_L} & X \ar[d]^{x_L}	 \\
+%						L \ar[d]_{p} \ar@{=}[r] \ar@{}[dr]|{1_p} & L \ar[d]^{p} \\
+%						J \ar@{=}[r] & J
+%			}}}
+%	\end{equation*}
+%	
+%	and a cell 
+%	
+%	\begin{equation*}
+%		\xymatrix{
+%			A \ar[r]|-{\bullet}^{N} \ar[d]_{l} \ar@{}[dr]|{\psi} & B \ar[d]^{k} \\
+%			C \ar[r]|-{\bullet}_{M} & D
+%		}
+%	\end{equation*}
+%	in $\cat{B}_1$. Since the bottom square is cartesian there is a unique cell 
+%	
+%	\begin{equation*}
+%		\xymatrix@=1cm{
+%			X \ar@{-->}[d]_{x_I} \ar@{=}[r] \ar@{}[dr]|{\tilde{\gamma}_I} & X \ar@{-->}[d]^{x_I} \\
+%			I \ar@{=}[r] & I
+%		}
+%	\end{equation*}
+%	Since the top and bottom squares lie over $\psi$, there is another unique cell $\tilde{\gamma}_K$ since the top square is cartesian. But $\tilde{\gamma}_I$ is given by the composition
+%	\begin{equation*}
+%		\vcenter{\vbox{\xymatrix@=1cm{
+%					X \ar[d]_{x_K} \ar@{=}[r] \ar@{}[dr]|{\tilde{\gamma}_K} & X \ar[d]^{x_K} \\
+%					K \ar[d]_{v} \ar@{=}[r] \ar@{}[dr]|{1_v} & K \ar[d]^{v} \\
+%					I \ar@{=}[r] & I 
+%		}}} \qquad
+%		= 
+%		\qquad
+%		\vcenter{\vbox{\xymatrix{
+%				X \ar[d]_{x_I} \ar@{=}[r] \ar@{}[dr]|{\tilde{\gamma}_I} & X \ar[d]^{x_I} \\
+%				I \ar@{=}[r] & I	
+%		}}}
+%	\end{equation*}
+%	Thus $\tilde{\gamma}_K$ is the unique cone morphism.
+	
+%\end{proof}
 
-\begin{proof}
-	The top and bottom faces are cartesian since the functor $\funct{i}{\cat{E}_0}{\cat{E}_1}$ preserves cartesian morphisms. Consider the a cone over the front and back faces \ie, for an object $1^{\bullet}_X$ we have cells
-	\begin{equation*}
-			\vcenter{\vbox{\xymatrix{
-						X \ar[d]_{x_I} \ar@{=}[r] \ar@{}[dr]|{\gamma_I} & X \ar[d]^{x_I} \\					
-						I \ar@{=}[r] & I
-			}}} \qquad
-			\vcenter{\vbox{\xymatrix{
-						X \ar[d]_{x_L} \ar@{=}[r] \ar@{}[dr]|{\gamma_L} & X \ar[d]^{x_L} \\					
-						L \ar@{=}[r] & L
-			}}}
-		\end{equation*}
-		such that
-		\begin{equation*}
-			\vcenter{\vbox{\xymatrix{
-						X \ar[d]_{x_I} \ar@{=}[r] \ar@{}[dr]|{\gamma_I} & X \ar[d]^{x_I}	 \\
-						I \ar[d]_{u} \ar@{=}[r] \ar@{}[dr]|{1_u} & I \ar[d]^{u} \\
-						J \ar@{=}[r] & J
-			}}} \quad
-			=
-			\quad
-			\vcenter{\vbox{\xymatrix{
-						X \ar[d]_{x_L} \ar@{=}[r] \ar@{}[dr]|{\gamma_L} & X \ar[d]^{x_L}	 \\
-						L \ar[d]_{p} \ar@{=}[r] \ar@{}[dr]|{1_p} & L \ar[d]^{p} \\
-						J \ar@{=}[r] & J
-			}}}
-	\end{equation*}
-	
-	and a cell 
-	
-	\begin{equation*}
-		\xymatrix{
-			A \ar[r]|-{\bullet}^{N} \ar[d]_{l} \ar@{}[dr]|{\psi} & B \ar[d]^{k} \\
-			C \ar[r]|-{\bullet}_{M} & D
-		}
-	\end{equation*}
-	in $\cat{B}_1$. Since the bottom square is cartesian there is a unique cell 
-	
-	\begin{equation*}
-		\xymatrix@=1cm{
-			X \ar@{-->}[d]_{x_I} \ar@{=}[r] \ar@{}[dr]|{\tilde{\gamma}_I} & X \ar@{-->}[d]^{x_I} \\
-			I \ar@{=}[r] & I
-		}
-	\end{equation*}
-	Since the top and bottom squares lie over $\psi$, there is another unique cell $\tilde{\gamma}_K$ since the top square is cartesian. But $\tilde{\gamma}_I$ is given by the composition
-	\begin{equation*}
-		\vcenter{\vbox{\xymatrix@=1cm{
-					X \ar[d]_{x_K} \ar@{=}[r] \ar@{}[dr]|{\tilde{\gamma}_K} & X \ar[d]^{x_K} \\
-					K \ar[d]_{v} \ar@{=}[r] \ar@{}[dr]|{1_v} & K \ar[d]^{v} \\
-					I \ar@{=}[r] & I 
-		}}} \qquad
-		= 
-		\qquad
-		\vcenter{\vbox{\xymatrix{
-				X \ar[d]_{x_I} \ar@{=}[r] \ar@{}[dr]|{\tilde{\gamma}_I} & X \ar[d]^{x_I} \\
-				I \ar@{=}[r] & I	
-		}}}
-	\end{equation*}
-	Thus $\tilde{\gamma}_K$ is the unique cone morphism.
-	
-\end{proof}
-
-\begin{lemma}
+\begin{lemma}\label{vpullbacks}
 	Let $\dfib{P}{E}{B}$ be a double fibration. A commuting square 
 	\begin{equation*}
 		\xymatrix{
@@ -590,10 +607,40 @@ over $\psi$.
 					D \ar[r]|{\bullet}_{\mathbi{q}} & D'
 		}}}
 	\end{equation*}
-	such that $\frac{\chi_\mathbi{q}}{\eta} = \frac{\chi_\mathbi{u}}{\beta}$. Since $\alpha$ is cartesian over some cell say $\vartheta$ in $\dcat{B}$, there is a unique cell $\chi_\mathbi{p}$. We note that $\beta$ is also cartesian over $\vartheta$, we have the unique cell $\chi_{\mathbi{u}}$ that we started with. Moreover, $\chi_{\mathbi{u}}$ is given by the composition $\chi_{\mathbi{u}} = \frac{\chi_{\mathbi{p}}}{\omega}$. Using cartesianness, these unique cells must be equal, hence $\chi_{\mathbi{p}}$ is a (unique)cone morphism.
+	such that 
+	
+	\begin{equation*}
+		\vcenter{\vbox{\xymatrix{
+					X \ar[d]_{x_{D}} \ar@{=}[r] \ar@{}[dr]|{\chi_{\mathbi{q}}} & X \ar[d]^{x_{D'}}	 \\
+					D \ar[d]_{l} \ar[r]|{\bullet}_{\mathbi{q}} \ar@{}[dr]|{\eta} & D' \ar[d]^{l'} \\
+					B \ar[r]|{\bullet}_{\mathbi{v}} & B'
+		}}} \quad
+		=
+		\quad
+		\vcenter{\vbox{\xymatrix{
+					X \ar[d]_{x_{A}} \ar@{=}[r] \ar@{}[dr]|{\chi_{\mathbi{u}}} & X \ar[d]^{x_{A'}}	 \\
+					D \ar[d]_{f} \ar[r]|{\bullet}_{\mathbi{u}} \ar@{}[dr]|{\beta} & D' \ar[d]^{f'} \\
+					B \ar[r]|{\bullet}_{\mathbi{v}} & B'
+		}}}
+	\end{equation*}
+	 Since $\alpha$ is cartesian over some cell say $\vartheta$ in $\dcat{B}$, there is a unique cell $\chi_\mathbi{p}$. We note that $\beta$ is also cartesian over $\vartheta$, we have the unique cell $\chi_{\mathbi{u}}$ that we started with. Moreover, we also have 
+	 \begin{equation*}
+	 		\vcenter{\vbox{\xymatrix{
+	 				X \ar[d]_{x_A} \ar@{=}[r] \ar@{}[dr]|{\chi_{\mathbi{u}}} & X \ar[d]^{x_{A'}} \\					
+	 				A \ar[r]|{\bullet}_{\mathbi{u}} & A'		
+	 		}}} \quad = \quad
+ 			\vcenter{\vbox{\xymatrix{
+ 					X \ar[d]_{x_{A}} \ar@{=}[r] \ar@{}[dr]|{\chi_{\mathbi{p}}} & X \ar[d]^{x_{A'}}	 \\
+ 					C \ar[d]_{k} \ar[r]|{\bullet}_{\mathbi{u}} \ar@{}[dr]|{\omega} & C' \ar[d]^{k'} \\
+ 					A \ar[r]|{\bullet}_{\mathbi{u}} & A'	
+ 			}}}
+	 \end{equation*}
+	Using cartesianness of $\beta$, these unique cells must be equal, hence $\chi_{\mathbi{p}}$ is the unique cone morphism.
 \end{proof}
 
-\begin{thm}
+We can use the above argument in the case of vertical pullbacks owing to the fact that the functor $\mor{i}{\cat{E}_0}{\cat{E}_1}$ is a cartesian functor.
+
+\begin{thm}\label{fibredvpullbacks}
 	If $\dfib{P}{E}{B}$ is a double fibration with  fibred pullbacks, then every pullback in some fibre is  a pullback in $\dcat{E}$.
 \end{thm}
 \begin{proof}
@@ -763,8 +810,12 @@ over $\psi$.
 \end{proof}
 
 \begin{thm}
-	A double fibration $\dfib{P}{E}{B}$ 
+	A double fibration $\dfib{P}{E}{B}$ has fibred pullbacks if and only if $\dcat{E}$ has and $P$ preserves pullbacks.
 \end{thm}
+
+\begin{proof}
+	Tedious but straightfoward realization that the `if' part follows from using the vertical-cartesian factorization of cells forming a pullback cube and Theorem \ref{fibredvpullbacks}.
+\end{proof}
 
 \begin{defn}
 	A double fibration $\dfib{P}{E}{B}$ has fibred tabulators if every fibre of $\cat{P}_1(M)$ has tabulators.
@@ -861,9 +912,9 @@ over $\psi$.
 	The above formulation works over horizontal globular cells, in general we would not obtain a tabulator under change of base.
 \end{remark}
 
-\begin{remark}
-	It is clear from Proposition \ref{vc} that for any commuting cube where the front square is a tabulator and the bottom square is cartesian, then the back square is a tabulator if and only if the cube is a pullback.
-\end{remark}
+%\begin{remark}
+%	It is clear from Lemma \ref{vpullbacks} that in a double fibration with fibred tabulators for any commuting cube where the front square is a tabulator and the bottom square is cartesian, then the back square is a tabulator if and only if the cube is a pullback.
+%\end{remark}
 
 %\begin{lemma}
 %	Let $\dfib{P}{E}{B}$ be a double fibration with fibred tabulators and 
@@ -885,8 +936,11 @@ over $\psi$.
 	Let $\dcat{D}$ be a double category with tabulators. Then the double fibration $\funct{\textbf{cod}}{\dcat{D}^2}{\dcat{D}}$ preserves tabulators. A tabulator in $\dcat{D}^2$ is given by a horizontal globular cell between tabulator objects. 
 \end{example}
 
-The image double fibration $\textbf{Im}$ does not preserve tabulators, it is left adjoint to the inclusion double functor $\mathbb{R}\text{el} \hookrightarrow \cspan$. However, \textbf{Im} preserves identities and composition up to isomorphism\footnote{The adjunction is pseudo/lax}. Moreover, it preserves tabulators of proarrow idenitites. \\
+\begin{example}
+	The image double fibration $\textbf{Im}$ does not preserve tabulators, it is left adjoint to the inclusion double functor $\mathbb{R}\text{el} \hookrightarrow \cspan$. However, \textbf{Im} preserves identities and composition up to isomorphism\footnote{The adjunction is pseudo/lax}. Moreover, it preserves tabulators of proarrow idenitites.
+\end{example} 
 
+\vspace{1cm}
 In general our double fibrations do not preserve tabulators. There is no straightforward way to characterize preservation property for fibred tabulators. We have the following restriced case
 \begin{thm}
 	Let $\dcat{B}$ be a double category with tabulators. A double fibration $\dfib{P}{E}{B}$ has fibred tabulators (of proarrow identities) if and only if $\dcat{E}$ has fibred tabulators (of proarrow identities) and $P$ preserves fibred tabulators (of proarrow identities).
